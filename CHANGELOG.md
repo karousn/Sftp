@@ -1,0 +1,1 @@
+# CHANGELOGAll notable changes to `UCSDMath\Sftp` (bug and security fixes) willbe documented in this file.# 1.0.0 (2015-06-29)- Initial Release of `UCSDMath\Sftp`
