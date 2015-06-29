@@ -1,1 +1,1 @@
-# CHANGELOGAll notable changes to `UCSDMath\Sftp` (bug and security fixes) willbe documented in this file.# 1.0.0 (2015-06-29)- Initial Release of `UCSDMath\Sftp`
+CHANGELOG for 1.0.x===================All notable changes to `UCSDMath\Sftp` (bug and security fixes) willbe documented in this file.# 1.0.1 (2015-06-29) - Fixed warning on "Ambiguous class resolution" when dumping optimized autoloader# 1.0.0 (2015-06-29) - Initial Release of `UCSDMath\Sftp`
