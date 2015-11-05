@@ -59,6 +59,7 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  */
 abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
 {
+
     /**
      * Constants.
      *
