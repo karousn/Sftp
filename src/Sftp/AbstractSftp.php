@@ -59,7 +59,6 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  */
 abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
 {
-
     /**
      * Constants.
      *
@@ -326,7 +325,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         } else {
             $this->logError(
                 'AbstractSftp::uploadFile()',
-                'cannot read/find local file (check local path): '. $absolutePath_localFile,
+                'cannot read/find local file (check local path): ' . $absolutePath_localFile,
                 'E085'
             );
         }
@@ -334,7 +333,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         if ($this->getFileSize($absolutePath_remoteFile) !== filesize($absolutePath_localFile)) {
             $this->logError(
                 'AbstractSftp::uploadFile()',
-                'remote/local file size != : '. $this->getFileSize($absolutePath_remoteFile).'/'.filesize($absolutePath_localFile),
+                'remote/local file size != : ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
                 'E086'
             );
         }
@@ -487,7 +486,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function getLs($absolutePath = null)
     {
-        if (! is_null($absolutePath)) {
+        if (!is_null($absolutePath)) {
             $theOldDirectoryPath = $this->getPwd();
             $this->changeDirectory($absolutePath);
 

@@ -24,7 +24,6 @@ namespace UCSDMath\Sftp;
  */
 class Sftp extends AbstractSftp implements SftpInterface
 {
-
     /**
      * Constants.
      *
