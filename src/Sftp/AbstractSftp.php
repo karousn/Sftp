@@ -389,9 +389,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function chmod($mode, $absolutePath, $recursive = false)
     {
-        /**
-         * Example: $netSftp->chmod(0777, '/home/link/public_html', true);
-         */
         $this->changeDirectory(dirname($absolutePath));
         $this->netSftp->chmod($mode, basename($absolutePath), $this->toBoolean($recursive));
 
