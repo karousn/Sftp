@@ -243,9 +243,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function createDirectory($absolutePath)
     {
-        /**
-         *  Requires absolute PATH.
-         */
+        /* Requires absolute PATH. */
         $this->changeDirectory(dirname($absolutePath));
         $this->sftp->mkdir(basename($absolutePath));
 
@@ -264,9 +262,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function deleteDirectory($absolutePath, $recursive = false)
     {
-        /**
-         *  Requires absolute PATH.
-         */
+        /* Requires absolute PATH. */
         $this->changeDirectory(dirname($absolutePath));
         $theDirectoryToRemove = basename($absolutePath);
         $this->sftp->delete($theDirectoryToRemove, $this->toBoolean($recursive));
@@ -435,7 +431,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function getPath()
+    public function getPwd()
     {
         return $this->sftp->pwd();
     }
@@ -489,21 +485,20 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function ls($absolutePath = null)
+    public function getLs($absolutePath = null)
     {
         if (! is_null($absolutePath)) {
             $theOldDirectoryPath = $this->pwd();
-            $this->changeToDirectory($absolutePath);
+            $this->changeDirectory($absolutePath);
 
             $theDirectoryFiles = $this->sftp->nlist();
-            $this->changeToDirectory($theOldDirectoryPath);
+            $this->changeDirectory($theOldDirectoryPath);
 
         } else {
             $theDirectoryFiles = $this->sftp->nlist();
         }
 
         return $theDirectoryFiles;
-
     }
 
     // --------------------------------------------------------------------------
@@ -515,11 +510,9 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function stat($remoteFileName)
+    public function getStat($remoteFileName)
     {
-
         return $this->sftp->stat($remoteFileName);
-
     }
 
     // --------------------------------------------------------------------------
@@ -531,7 +524,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function lstat($remoteFileName)
+    public function getLstat($remoteFileName)
     {
         return $this->sftp->lstat($remoteFileName);
     }
@@ -619,32 +612,3 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     use ServiceFunctions;
 }
-
-/**
- * Other commands that may be useful:
- *
- * $sftp->touch($remote_file);
- * $sftp->chown($remote_file, $uid);
- * $sftp->chown($remote_dir, $uid, true); // recursive
- * $sftp->chmod(0777, $remote_file);
- * $sftp->chmod(0777, $remote_dir, true); // recursive
- * $sftp->chgrp($remote_file, $gid);
- * $sftp->chgrp($remote_file, $gid, true); // recursive
- * $sftp->lstat($remote_file);
- * $sftp->stat($remote_file);
- * $sftp->size($remote_file);
- * $sftp->delete($remote_file);
- * $sftp->delete($remote_dir, true);       // recursive
- * $sftp->rename($remote_file, $remote_newfilename);
- * $sftp->nlist();
- * $sftp->rawlist();
- * $sftp->mkdir('test');   // create directory 'test'
- * $sftp->chdir('test');   // open directory 'test'
- * $sftp->pwd();           // show that we're in the 'test' directory
- * $sftp->chdir('..');     // go back to the parent directory
- * $sftp->rmdir('test');   // delete the directory. If file inside, then $sftp->delete('test', true);
- * echo $sftp->get($remote_file);                // outputs the contents to the screen
- * $sftp->get($remote_file, $local_file);        // copies remote file to local from the SFTP server
- * $sftp->put($remote_file, $my_string );        // stream text to a remote file
- * $sftp->put($remote_file, $local_file, NET_SFTP_LOCAL_FILE);  // upload file to remote host SFTP
- */
