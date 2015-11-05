@@ -431,9 +431,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function getPwd()
     {
-        $sftp = $this->netSftp;
-
-        return $sftp->pwd();
+        return $this->netSftp->pwd();
     }
 
     // --------------------------------------------------------------------------

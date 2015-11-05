@@ -18,7 +18,6 @@ namespace UCSDMath\Sftp;
  * Method list:
  *
  * @method SftpInterface __construct();
- * @method void __destruct();
  * @method getPath();
  * @method renameFile($absolutePath_old, $absolutePath_new);
  * @method renameDirectory($absolutePath_old, $absolutePath_new);
