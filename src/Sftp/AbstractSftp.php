@@ -159,8 +159,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
             ? $this->appendToStorageRegister($accountCredentials)
             : $this->logError('AbstractSftp::connect()', 'invalid account credentials', 'E076');
 
-        $this->netSftp = new NetSftp($this->get('account_host'));
-        $this->netSftp->login($this->get('account_username'), $this->get('account_password'));
+        list($account_host, $account_username, $account_password) = [
+            $this->get('account_host'),
+            $this->get('account_username'),
+            $this->get('account_password')
+        ];
+
+        $this->netSftp = new NetSftp($account_host);
+        $this->netSftp->login($account_username, $account_password);
 
         return $this;
     }
