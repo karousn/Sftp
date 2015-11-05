@@ -267,7 +267,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * Delete directory and all its contents.
      *
      * @param  string $absolutePath  A absolute path to directory
-     * @param  string $recursive     A option to delete recursively
+     * @param  bool   $recursive     A option to delete recursively
      *
      * @return SftpInterface
      *
@@ -277,8 +277,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     {
         /* Requires absolute PATH. */
         $this->changeDirectory(dirname($absolutePath));
-        $theDirectoryToRemove = basename($absolutePath);
-        $this->netSftp->delete($theDirectoryToRemove, $this->toBoolean($recursive));
+        $this->netSftp->delete(basename($absolutePath), $this->toBoolean($recursive));
 
         return $this;
     }
