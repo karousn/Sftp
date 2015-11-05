@@ -323,17 +323,13 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
             $this->netSftp->put($absolutePath_remoteFile, $absolutePath_localFile, static::SOURCE_LOCAL_FILE);
 
         } else {
-            $this->logError(
-                'AbstractSftp::uploadFile()',
-                'cannot read/find local file (check local path): ' . $absolutePath_localFile,
-                'E085'
-            );
+            $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePath_localFile, 'E085');
         }
 
         if ($this->getFileSize($absolutePath_remoteFile) !== filesize($absolutePath_localFile)) {
             $this->logError(
                 'AbstractSftp::uploadFile()',
-                'remote/local file size != : ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
+                'remote/local file size: ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
                 'E086'
             );
         }
