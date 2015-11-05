@@ -326,10 +326,29 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
             $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePath_localFile, 'E085');
         }
 
+        $this->checkForSameFileSize($absolutePath_remoteFile, $absolutePath_localFile);
+
+        return $this;
+    }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Compare .
+     *
+     * @param  string $remoteFile  A absolute path to remote file (new)
+     * @param  string $localFile   A absolute path to local file
+     *
+     * @return SftpInterface
+     *
+     * @api
+     */
+    public function checkForSameFileSize($remoteFile, $localFile)
+    {
         if ($this->getFileSize($absolutePath_remoteFile) !== filesize($absolutePath_localFile)) {
             $this->logError(
                 'AbstractSftp::uploadFile()',
-                'remote/local file size: ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
+                'Error: The remote/local file size do not match: ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
                 'E086'
             );
         }
