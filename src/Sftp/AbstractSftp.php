@@ -344,10 +344,10 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function checkForSameFileSize($remoteFile, $localFile)
     {
-        if ($this->getFileSize($absolutePath_remoteFile) !== filesize($absolutePath_localFile)) {
+        if ($this->getFileSize($remoteFile) !== filesize($localFile)) {
             $this->logError(
-                'AbstractSftp::uploadFile()',
-                'Error: The remote/local file size do not match: ' . $this->getFileSize($absolutePath_remoteFile) . '/' . filesize($absolutePath_localFile),
+                'AbstractSftp::checkForSameFileSize()',
+                'Error: The remote/local file size do not match: ' . $this->getFileSize($remoteFile) . '/' . filesize($localFile),
                 'E086'
             );
         }
