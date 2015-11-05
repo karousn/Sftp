@@ -48,6 +48,13 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  * @method logError($method, $message, $trace);
  * @method isValidFtpAccountCredentials(array $accountCredentials);
  *
+ * @method getPwd();
+ * @method renameFile($absolutePath_old, $absolutePath_new);
+ * @method renameDirectory($absolutePath_old, $absolutePath_new);
+ * @method touch($absolutePath);
+ * @method uploadString($absolutePath_remoteFile, $str);
+ * @method downloadString($absolutePath_remoteFile);
+ *
  * @author Daryl Eisner <deisner@ucsd.edu>
  */
 abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
@@ -326,7 +333,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         if ($this->getFileSize($absolutePath_remoteFile) !== filesize($absolutePath_localFile)) {
             $this->logError(
                 'AbstractSftp::uploadFile()',
-                'remote/local file size != : '. $remote_file_size.'/'.$local_file_size,
+                'remote/local file size != : '. $this->getFileSize($absolutePath_remoteFile).'/'.filesize($absolutePath_localFile),
                 'E086'
             );
         }
@@ -480,7 +487,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     public function getLs($absolutePath = null)
     {
         if (! is_null($absolutePath)) {
-            $theOldDirectoryPath = $this->pwd();
+            $theOldDirectoryPath = $this->getPwd();
             $this->changeDirectory($absolutePath);
 
             $theDirectoryFiles = $this->netSftp->nlist();

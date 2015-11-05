@@ -17,13 +17,6 @@ namespace UCSDMath\Sftp;
  *
  * Method list:
  *
- * @method SftpInterface __construct();
- * @method getPath();
- * @method renameFile($absolutePath_old, $absolutePath_new);
- * @method renameDirectory($absolutePath_old, $absolutePath_new);
- * @method touch($absolutePath);
- * @method uploadString($absolutePath_remoteFile, $str);
- * @method downloadString($absolutePath_remoteFile);
  *
  * @author Daryl Eisner <deisner@ucsd.edu>
  *
