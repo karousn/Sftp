@@ -135,7 +135,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function toBoolean($trialBool = null)
     {
-        /** String to boolean.
+        /* String to boolean.
          *
          * 'true' === true      'false' === false
          * '1'    === true      '0'     === false
