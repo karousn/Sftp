@@ -8,9 +8,12 @@ be documented in this file.
 
  - Updated minor changes to `UCSDMath\DependencyInjection`
  - Updated minor SQL fixes
+ - Updated coding changes anticipation of PHP7
+ - Updated dependency to Symfony 3.0 (removed all 2.x)
+ - Fixed Github commits for Mac OS X line-endings to Unix
  - Updated minor formatting and comments
  - Added minor changes to ready PHP7 phase
- - Various javascript updates
+ - Various JavaScript updates
 
 # 1.4.0 (2015-10-12)
 
