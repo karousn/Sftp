@@ -4,6 +4,14 @@ CHANGELOG
 All notable changes to `UCSDMath\Sftp` (bug and security fixes) will
 be documented in this file.
 
+# 1.5.0 (2015-12-05)
+
+ - Updated minor changes to `UCSDMath\DependencyInjection`
+ - Updated minor SQL fixes
+ - Updated minor formatting and comments
+ - Added minor changes to ready PHP7 phase
+ - Various javascript updates
+
 # 1.4.0 (2015-10-12)
 
  - Updated DDL database schema for system_logs, office_hours, ta_assignments
