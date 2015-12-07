@@ -21,8 +21,8 @@
     "require": {
         "php": ">=5.6.10",
         "phpseclib/phpseclib": "2.0.*",
-        "ucsdmath/functions": "1.5.x-dev",
-        "ucsdmath/dependency-injection": "1.5.x-dev"
+        "ucsdmath/functions": "1.6.x-dev",
+        "ucsdmath/dependency-injection": "1.6.x-dev"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
@@ -39,7 +39,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.5.x-dev"
+            "dev-master": "1.6.x-dev"
         }
     }
 }
