@@ -5,7 +5,7 @@
 [![Total Downloads](https://poser.pugx.org/ucsdmath/Sftp/downloads)](https://packagist.org/packages/ucsdmath/Sftp)
 [![Latest Unstable Version](https://poser.pugx.org/ucsdmath/Sftp/v/unstable)](https://packagist.org/packages/ucsdmath/Sftp)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/code-structure/master)
+[![Build Status](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/build-status/master)
 
 Sftp is a testing and development library only. This is not to be used in a production.
 
