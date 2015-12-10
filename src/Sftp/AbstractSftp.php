@@ -29,31 +29,31 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  *
  * Method list:
  *
- * @method SftpInterface __construct();
- * @method void __destruct();
- * @method connect(array $accountCredentials = null);
- * @method uploadFile($absolutePath_remoteFile, $absolutePath_localFile);
- * @method deleteFile($absolutePath);
- * @method getFileSize($absolutePath);
- * @method downloadFile($absolutePath_remoteFile, $absolutePath_localFile);
+ * (+) SftpInterface __construct();
+ * (+) void __destruct();
+ * (+) connect(array $accountCredentials = null);
+ * (+) uploadFile($absolutePath_remoteFile, $absolutePath_localFile);
+ * (+) deleteFile($absolutePath);
+ * (+) getFileSize($absolutePath);
+ * (+) downloadFile($absolutePath_remoteFile, $absolutePath_localFile);
  *
- * @method createDirectory($absolutePath);
- * @method deleteDirectory($absolutePath, $recursive = false);
- * @method changeDirectory($absolutePath);
+ * (+) createDirectory($absolutePath);
+ * (+) deleteDirectory($absolutePath, $recursive = false);
+ * (+) changeDirectory($absolutePath);
  *
- * @method chmod($mode, $absolutePath, $recursive = false);
- * @method appendToStorageRegister(array $arraySubset);
+ * (+) chmod($mode, $absolutePath, $recursive = false);
+ * (+) appendToStorageRegister(array $arraySubset);
  *
- * @method toBoolean($trialBool = null);
- * @method logError($method, $message, $trace);
- * @method isValidFtpAccountCredentials(array $accountCredentials);
+ * (+) toBoolean($trialBool = null);
+ * (+) logError($method, $message, $trace);
+ * (+) isValidFtpAccountCredentials(array $accountCredentials);
  *
- * @method getPwd();
- * @method renameFile($absolutePath_old, $absolutePath_new);
- * @method renameDirectory($absolutePath_old, $absolutePath_new);
- * @method touch($absolutePath);
- * @method uploadString($absolutePath_remoteFile, $str);
- * @method downloadString($absolutePath_remoteFile);
+ * (+) getPwd();
+ * (+) renameFile($absolutePath_old, $absolutePath_new);
+ * (+) renameDirectory($absolutePath_old, $absolutePath_new);
+ * (+) touch($absolutePath);
+ * (+) uploadString($absolutePath_remoteFile, $str);
+ * (+) downloadString($absolutePath_remoteFile);
  *
  * @author Daryl Eisner <deisner@ucsd.edu>
  */
@@ -603,24 +603,24 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * The notation below illustrates visibility: (+) @api, (-) protected or private.
      *
-     * @method all();
-     * @method init();
-     * @method get($key);
-     * @method has($key);
-     * @method version();
-     * @method getClassName();
-     * @method getConst($key);
-     * @method set($key, $value);
-     * @method isString($str);
-     * @method getInstanceCount();
-     * @method getClassInterfaces();
-     * @method __call($callback, $parameters);
-     * @method getProperty($name, $key = null);
-     * @method doesFunctionExist($functionName);
-     * @method isStringKey($str, array $keys);
-     * @method throwExceptionError(array $error);
-     * @method setProperty($name, $value, $key = null);
-     * @method throwInvalidArgumentExceptionError(array $error);
+     * (+) all();
+     * (+) init();
+     * (+) get($key);
+     * (+) has($key);
+     * (+) version();
+     * (+) getClassName();
+     * (+) getConst($key);
+     * (+) set($key, $value);
+     * (+) isString($str);
+     * (+) getInstanceCount();
+     * (+) getClassInterfaces();
+     * (+) __call($callback, $parameters);
+     * (+) getProperty($name, $key = null);
+     * (+) doesFunctionExist($functionName);
+     * (+) isStringKey($str, array $keys);
+     * (+) throwExceptionError(array $error);
+     * (+) setProperty($name, $value, $key = null);
+     * (+) throwInvalidArgumentExceptionError(array $error);
      */
     use ServiceFunctions;
 }
