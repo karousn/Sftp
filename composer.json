@@ -1,1 +1,46 @@
-{    "name": "ucsdmath/sftp",    "description": "Sftp is a adapter for the phpseclib library. Sftp is a testing and development library only",    "keywords": ["sftp", "phpseclib", "ucsdmath"],    "homepage": "https://github.com/UCSDMath",    "type": "library",    "license": "MIT",    "time": "2015-12-05",    "minimum-stability": "dev",    "prefer-stable": true,    "authors": [        {            "name": "Daryl Eisner",            "email": "deisner@ucsd.edu"        }    ],    "support": {        "source": "https://github.com/UCSDMath/Sftp",        "email": "deisner@ucsd.edu"    },    "require": {        "php": ">=5.6.10",        "phpseclib/phpseclib": "2.0.0",        "ucsdmath/functions": "1.5.x-dev",        "ucsdmath/dependency-injection": "1.5.x-dev"    },    "require-dev": {        "mockery/mockery": "0.9.4",        "phpunit/phpunit": "5.1.3",        "ucsdmath/testing": "1.5.x-dev",        "squizlabs/php_codesniffer": "2.4.0"    },    "autoload": {        "psr-4": {            "UCSDMath\\Sftp\\": "src/Sftp/"        }    },    "suggest": {        "symfony/filesystem": "Filesystem provides basic utility to manipulate the file system."    },    "extra": {        "branch-alias": {            "dev-master": "1.5.x-dev"        }    }}
+{
+    "name": "ucsdmath/sftp",
+    "description": "Sftp is a adapter for the phpseclib library. Sftp is a testing and development library only",
+    "keywords": ["sftp", "phpseclib", "ucsdmath"],
+    "homepage": "https://github.com/UCSDMath",
+    "type": "library",
+    "license": "MIT",
+    "time": "2015-12-05",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Daryl Eisner",
+            "email": "deisner@ucsd.edu"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/UCSDMath/Sftp",
+        "email": "deisner@ucsd.edu"
+    },
+    "require": {
+        "php": ">=5.6.10",
+        "phpseclib/phpseclib": "2.0.0",
+        "ucsdmath/functions": "1.5.x-dev",
+        "ucsdmath/dependency-injection": "1.5.x-dev"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.4",
+        "phpunit/phpunit": "5.1.3",
+        "ucsdmath/testing": "1.5.x-dev",
+        "squizlabs/php_codesniffer": "2.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "UCSDMath\\Sftp\\": "src/Sftp/"
+        }
+    },
+    "suggest": {
+        "symfony/filesystem": "Filesystem provides basic utility to manipulate the file system."
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.5.x-dev"
+        }
+    }
+}
