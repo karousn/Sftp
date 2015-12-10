@@ -27,7 +27,7 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  * extension of the Secure Shell protocol (SSH). This is an adapter to the phpseclib
  * library suite.
  *
- * Method list:
+ * Method list: (+) @api, (-) protected or private visibility.
  *
  * (+) SftpInterface __construct();
  * (+) void __destruct();
@@ -599,9 +599,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     // --------------------------------------------------------------------------
 
     /**
-     * Method implementations inserted.
-     *
-     * The notation below illustrates visibility: (+) @api, (-) protected or private.
+     * Method implementations inserted:
      *
      * (+) all();
      * (+) init();
