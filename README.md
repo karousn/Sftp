@@ -15,7 +15,7 @@ adding the ucsdmath/sftp package to your composer.json file:
 
 ```
 "require": {
-    "php": ">=5.6",
+    "php": ">=5.6.10",
     "ucsdmath/sftp": "dev-master"
 },
 ```
