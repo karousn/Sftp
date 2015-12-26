@@ -21,13 +21,13 @@
     "require": {
         "php": ">=7.0.0",
         "phpseclib/phpseclib": "2.0.0",
-        "ucsdmath/functions": "1.5.x-dev",
-        "ucsdmath/dependency-injection": "1.5.x-dev"
+        "ucsdmath/functions": "1.6.x-dev",
+        "ucsdmath/dependency-injection": "1.6.x-dev"
     },
     "require-dev": {
         "mockery/mockery": "0.9.4",
         "phpunit/phpunit": "5.1.3",
-        "ucsdmath/testing": "1.5.x-dev",
+        "ucsdmath/testing": "1.6.x-dev",
         "squizlabs/php_codesniffer": "2.5.0"
     },
     "autoload": {
@@ -40,7 +40,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.5.x-dev"
+            "dev-master": "1.6.x-dev"
         }
     }
 }
