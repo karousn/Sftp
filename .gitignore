@@ -1,6 +1,13 @@
-.DS_Store
-composer.lock
+vendor/
 composer.phar
+composer.lock
+composer-test.lock
+phpunit.xml
+.php_cs.cache
 packages.json
-/src/dev
-/vendor/
+.DS_Store
+.idea
+src/dev/
+dist/
+Thumbs.db
+ucsdmath-build.yml
