@@ -1,13 +1,11 @@
 {
     "name": "ucsdmath/sftp",
+    "type": "library",
     "description": "Sftp is a adapter for the phpseclib library. Sftp is a testing and development library only",
     "keywords": ["sftp", "ucsdmath", "phpseclib", "component"],
     "homepage": "https://github.com/ucsdmath",
-    "type": "library",
     "license": "MIT",
     "time": "2015-12-05",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "authors": [
         {"name": "Daryl Eisner", "email": "deisner@ucsd.edu"}
     ],
@@ -35,6 +33,8 @@
     "suggest": {
         "symfony/filesystem": "Filesystem provides basic utility to manipulate the file system."
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "branch-alias": {
             "dev-master": "1.6.x-dev"
