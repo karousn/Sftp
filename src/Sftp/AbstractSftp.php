@@ -158,7 +158,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @return SftpInterface
      */
-    public function connect(array $accountCredentials)
+    public function connect(array $accountCredentials): self
     {
         /**
          * Note: on a successful login, the default directory
@@ -235,7 +235,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function changeDirectory($absolutePath)
+    public function changeDirectory($absolutePath): self
     {
         $this->netSftp->chdir($absolutePath);
 
@@ -253,7 +253,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function createDirectory($absolutePath)
+    public function createDirectory($absolutePath): self
     {
         /* Requires absolute PATH. */
         $this->changeDirectory(dirname($absolutePath));
@@ -274,7 +274,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function deleteDirectory($absolutePath, $recursive = false)
+    public function deleteDirectory($absolutePath, $recursive = false): self
     {
         /* Requires absolute PATH. */
         $this->netSftp->chdir(dirname($absolutePath));
@@ -311,7 +311,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function uploadFile($absolutePath_remoteFile, $absolutePath_localFile)
+    public function uploadFile($absolutePath_remoteFile, $absolutePath_localFile): self
     {
         if (file_exists($absolutePath_localFile) && is_readable($absolutePath_localFile)) {
             /**
@@ -343,7 +343,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function checkForSameFileSize($remoteFile, $localFile)
+    public function checkForSameFileSize($remoteFile, $localFile): self
     {
         if ($this->getFileSize($remoteFile) !== filesize($localFile)) {
             $this->logError(
@@ -367,7 +367,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function deleteFile($absolutePath)
+    public function deleteFile($absolutePath): self
     {
         $this->netSftp->delete($absolutePath);
 
@@ -386,7 +386,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function downloadFile($absolutePath_remoteFile, $absolutePath_localFile)
+    public function downloadFile($absolutePath_remoteFile, $absolutePath_localFile): self
     {
         $this->netSftp->get($absolutePath_remoteFile, $absolutePath_localFile);
 
@@ -406,7 +406,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function chmod($mode, $absolutePath, $recursive = false)
+    public function chmod($mode, $absolutePath, $recursive = false): self
     {
         $this->changeDirectory(dirname($absolutePath));
         $this->netSftp->chmod($mode, basename($absolutePath), $this->toBoolean($recursive));
@@ -423,7 +423,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @return SftpInterface
      */
-    protected function appendToStorageRegister(array $arraySubset)
+    protected function appendToStorageRegister(array $arraySubset): self
     {
         /* Merge both registers and apply the overrides. */
         $this->storageRegister = array_merge($this->storageRegister, $arraySubset);
@@ -457,7 +457,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function renameFile($absolutePath_old, $absolutePath_new)
+    public function renameFile($absolutePath_old, $absolutePath_new): self
     {
         $this->netSftp->rename($absolutePath_old, $absolutePath_new);
 
@@ -476,7 +476,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function renameDirectory($absolutePath_old, $absolutePath_new)
+    public function renameDirectory($absolutePath_old, $absolutePath_new): self
     {
         $this->netSftp->rename($absolutePath_old, $absolutePath_new);
 
@@ -555,7 +555,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function touch($path)
+    public function touch($path): self
     {
         $this->netSftp->touch($path);
 
@@ -574,7 +574,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function uploadString($absolutePath_remoteFile, $str)
+    public function uploadString($absolutePath_remoteFile, $str): self
     {
         $this->netSftp->put($absolutePath_remoteFile, $str);
 
