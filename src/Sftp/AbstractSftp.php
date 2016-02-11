@@ -625,4 +625,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * (+) throwInvalidArgumentExceptionError(array $error);
      */
     use ServiceFunctions;
+
+    // --------------------------------------------------------------------------
 }

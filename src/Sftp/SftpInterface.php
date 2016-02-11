@@ -27,4 +27,6 @@ interface SftpInterface
     const SOURCE_LOCAL_FILE = 1;
     const SOURCE_CALLBACK = 16;
     const SOURCE_STRING = 2;
+
+    // --------------------------------------------------------------------------
 }

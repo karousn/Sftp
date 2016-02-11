@@ -51,4 +51,6 @@ class Sftp extends AbstractSftp implements SftpInterface
     {
         parent::__construct();
     }
+
+    // --------------------------------------------------------------------------
 }
