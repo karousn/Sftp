@@ -10,4 +10,4 @@ packages.json
 src/dev/
 dist/
 Thumbs.db
-ucsdmath-build.yml
+ucsdmath-build-x.yml

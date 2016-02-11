@@ -1,0 +1,25 @@
+# Framework Component: ucsdmath/
+# File: .scrutinizer.yml
+# -----------------------------------
+build:
+    environment:
+        php:
+            version: 7.0
+checks:
+    php:
+        code_rating: true
+        duplication: true
+        remove_php_closing_tag: false
+filter:
+    excluded_paths:
+        - tests/*
+        - dev/*
+tools:
+    external_code_coverage:
+        timeout: 600
+        runs: 3
+    php_analyzer: true
+    php_code_coverage: true
+    php_code_sniffer:
+        config:
+            standard: PSR2
