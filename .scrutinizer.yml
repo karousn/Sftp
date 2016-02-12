@@ -9,7 +9,9 @@ checks:
     php:
         code_rating: true
         duplication: true
+        fix_doc_comments: false
         remove_php_closing_tag: false
+        remove_trailing_whitespace: false
 filter:
     excluded_paths:
         - tests/*
