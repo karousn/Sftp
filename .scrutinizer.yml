@@ -11,6 +11,7 @@ checks:
         duplication: true
         fix_doc_comments: false
         remove_php_closing_tag: false
+        remove_extra_empty_lines: false
         remove_trailing_whitespace: false
 filter:
     excluded_paths:

@@ -1,5 +1,6 @@
 language: php
 
+# PHP 7 has been selected as the minimum supported release for UCSDMath.
 php:
   - 7.0
   - hhvm
@@ -11,13 +12,13 @@ sudo: false
 matrix:
     include:
         - php: 7
-          env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
+          env: 'COMPOSER_OPTS="--prefer-stable --prefer-lowest"'
         - php: 7
     fast_finish: true
 
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-source
+  - travis_retry composer update ${COMPOSER_OPTS} --no-interaction --prefer-source
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
