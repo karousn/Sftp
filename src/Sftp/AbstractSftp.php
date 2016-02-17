@@ -218,10 +218,8 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
          * Intersect the targets with the haystack and make sure
          * the intersection is precisely equal to the targets.
          */
-        return count(array_intersect(
-            array_keys($accountCredentials),
-            $this->requiredFtpAccountCredentials)
-        ) === count($this->requiredFtpAccountCredentials);
+        return count(array_intersect(array_keys($accountCredentials), $this->requiredFtpAccountCredentials))
+            === count($this->requiredFtpAccountCredentials);
     }
 
     // --------------------------------------------------------------------------
