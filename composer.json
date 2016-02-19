@@ -5,7 +5,7 @@
     "keywords": ["sftp", "ucsdmath", "phpseclib", "component"],
     "homepage": "https://github.com/ucsdmath",
     "license": "MIT",
-    "time": "2015-12-05",
+    "time": "2016-02-19",
     "authors": [
         {"name": "Daryl Eisner", "email": "deisner@ucsd.edu"}
     ],
