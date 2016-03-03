@@ -18,6 +18,10 @@
 
 Sftp is a testing and development library only. This is not to be used in a production.
 
+Copy this software from:
+- [Packagist.org](https://packagist.org/packages/ucsdmath/Sftp)
+- [Github.com](https://github.com/ucsdmath/Sftp)
+
 ## Installation using [Composer](http://getcomposer.org/)
 You can install the class ```Sftp``` with Composer and Packagist by
 adding the ucsdmath/sftp package to your composer.json file:
