@@ -8,13 +8,13 @@
   </tr>
 </table>
 ---
+[![Build Status](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/build-status/master)
 [![Latest Stable Version](https://poser.pugx.org/ucsdmath/Sftp/v/stable)](https://packagist.org/packages/ucsdmath/Sftp)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.0-8892BF.svg?style=flat)](https://php.net/)
 [![License](https://poser.pugx.org/ucsdmath/Sftp/license)](https://packagist.org/packages/ucsdmath/Sftp)
 [![Total Downloads](https://poser.pugx.org/ucsdmath/Sftp/downloads)](https://packagist.org/packages/ucsdmath/Sftp)
 [![Latest Unstable Version](https://poser.pugx.org/ucsdmath/Sftp/v/unstable)](https://packagist.org/packages/ucsdmath/Sftp)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/?branch=master)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ucsdmath/Sftp.svg)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/?branch=master)v
-[![Build Status](https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/build.png?b=master)](https://scrutinizer-ci.com/g/ucsdmath/Sftp/build-status/master)
 
 Sftp is a testing and development library only. This is not to be used in a production.
 
