@@ -10,15 +10,10 @@ php:
 sudo: false
 
 matrix:
+    fast_finish: true
     include:
         - php: 7
           env: 'COMPOSER_OPTS="--prefer-stable --prefer-lowest"'
-        - php: 7
-    fast_finish: true
 
 before_script:
   - travis_retry composer self-update
-  - travis_retry composer update ${COMPOSER_OPTS} --no-interaction --prefer-source
-
-script:
-  - vendor/bin/phpcs --standard=psr2 src/
