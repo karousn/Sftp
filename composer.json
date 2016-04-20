@@ -17,6 +17,7 @@
         "php": "^7.0",
         "phpseclib/phpseclib": "2.0.1",
         "ucsdmath/functions": "1.7.x-dev",
+        "ucsdmath/configuration": "1.7.x-dev",
         "ucsdmath/dependency-injection": "1.7.x-dev"
     },
     "require-dev": {
