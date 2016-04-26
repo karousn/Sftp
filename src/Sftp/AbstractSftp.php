@@ -604,24 +604,29 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Method implementations inserted:
      *
-     * (+) all();
-     * (+) init();
-     * (+) get($key);
-     * (+) has($key);
-     * (+) version();
-     * (+) getClassName();
-     * (+) getConst($key);
-     * (+) set($key, $value);
-     * (+) isString($str);
-     * (+) getInstanceCount();
-     * (+) getClassInterfaces();
-     * (+) __call($callback, $parameters);
-     * (+) getProperty($name, $key = null);
-     * (+) doesFunctionExist($functionName);
-     * (+) isStringKey($str, array $keys);
-     * (+) throwExceptionError(array $error);
-     * (+) setProperty($name, $value, $key = null);
-     * (+) throwInvalidArgumentExceptionError(array $error);
+     * Method noted as: (+) @api, (-) protected or private visibility.
+     *
+     * (+) array all();
+     * (+) object init();
+     * (+) string version();
+     * (+) bool isString($str);
+     * (+) bool has(string $key);
+     * (+) string getClassName();
+     * (+) int  getInstanceCount();
+     * (+) bool isValidUuid($uuid);
+     * (+) bool isValidEmail($email);
+     * (+) bool isValidSHA512($hash);
+     * (+) array getClassInterfaces();
+     * (+) mixed getConst(string $key);
+     * (+) mixed __call($callback, $parameters);
+     * (+) bool doesFunctionExist($functionName);
+     * (+) bool isStringKey(string $str, array $keys);
+     * (+) Exception throwExceptionError(array $error);
+     * (+) mixed get(string $key, string $subkey = null);
+     * (+) bool getProperty(string $name, string $key = null);
+     * (+) object set(string $key, $value, string $subkey = null);
+     * (+) object setProperty(string $name, $value, string $key = null);
+     * (+) InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
      */
     use ServiceFunctions;
 
