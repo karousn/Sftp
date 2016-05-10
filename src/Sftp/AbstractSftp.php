@@ -612,21 +612,21 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * (+) bool isString($str);
      * (+) bool has(string $key);
      * (+) string getClassName();
-     * (+) int  getInstanceCount();
-     * (+) bool isValidUuid($uuid);
+     * (+) int getInstanceCount();
      * (+) bool isValidEmail($email);
-     * (+) bool isValidSHA512($hash);
      * (+) array getClassInterfaces();
      * (+) mixed getConst(string $key);
+     * (+) bool isValidUuid(string $uuid);
+     * (+) bool isValidSHA512(string $hash);
      * (+) mixed __call($callback, $parameters);
      * (+) bool doesFunctionExist($functionName);
      * (+) bool isStringKey(string $str, array $keys);
-     * (+) Exception throwExceptionError(array $error);
      * (+) mixed get(string $key, string $subkey = null);
-     * (+) bool getProperty(string $name, string $key = null);
+     * (+) mixed getProperty(string $name, string $key = null);
      * (+) object set(string $key, $value, string $subkey = null);
      * (+) object setProperty(string $name, $value, string $key = null);
-     * (+) InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
+     * (-) \Exception throwExceptionError(array $error);
+     * (-) \InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
      */
     use ServiceFunctions;
 
