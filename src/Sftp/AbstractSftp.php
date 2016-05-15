@@ -194,10 +194,10 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     protected function logError(string $method, string $message, string $trace)
     {
-        ServiceRequestContainer::init()
+        ServiceRequestContainer::serve()
             ->get('Database')
                 ->insertiNetRecordLog(
-                    ServiceRequestContainer::init()
+                    ServiceRequestContainer::serve()
                         ->get('Session')
                             ->getPassport('email'),
                     sprintf('-- SFTP Error: %s - [ %s ] [ %s ]', $method, $message, $trace)
