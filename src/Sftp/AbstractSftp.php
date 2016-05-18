@@ -70,7 +70,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     const VERSION = '1.7.0';
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Properties.
@@ -97,7 +97,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     protected static $instance = null;
     protected static $objectCount = 0;
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Constructor.
@@ -110,7 +110,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         static::$objectCount++;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Destructor.
@@ -122,7 +122,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         static::$objectCount--;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Boolean checker and parser.
@@ -150,14 +150,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return filter_var($trialBool, FILTER_VALIDATE_BOOLEAN);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Connect to remote account.
      *
      * @param array $accountCredentials  A list of remote account credentials
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      */
     public function connect(array $accountCredentials): SftpInterface
     {
@@ -181,7 +181,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Log errors to system_logs table.
@@ -204,7 +204,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
                 );
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Validate SFTP Account Credentials.
@@ -223,14 +223,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
             === count($this->requiredFtpAccountCredentials);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Change directory.
      *
      * @param string $absolutePath  A directory name preference
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -241,14 +241,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Create a new directory on the remote host.
      *
      * @param string $absolutePath  A absolute path to directory
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -261,7 +261,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Delete directory and all its contents.
@@ -269,7 +269,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath  A absolute path to directory
      * @param bool   $recursive     A option to delete recursively
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -282,7 +282,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Return file size.
@@ -298,7 +298,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return (int) $this->netSftp->size($absolutePath);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Upload file to remote account.
@@ -306,7 +306,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath_remoteFile  A absolute path to remote file (new)
      * @param string $absolutePath_localFile   A absolute path to local file
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -333,7 +333,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Compare.
@@ -341,7 +341,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $remoteFile  A absolute path to remote file (new)
      * @param string $localFile   A absolute path to local file
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -358,14 +358,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Delete remote file.
      *
      * @param string $absolutePath  A absolute path to remote file
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -376,7 +376,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Download file from remote account.
@@ -384,7 +384,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath_remoteFile  A absolute path to remote file (new)
      * @param string $absolutePath_localFile   A absolute path to local file
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -395,7 +395,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Change remote file permissions (files and directories).
@@ -404,7 +404,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath  A filename or directory path
      * @param bool   $recursive     A recursive delete option
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -416,14 +416,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Combine storageRegister with associated array.
      *
      * @param array $arraySubset  A array list
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      */
     protected function appendToStorageRegister(array $arraySubset): SftpInterface
     {
@@ -433,7 +433,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Get directory path.
@@ -447,7 +447,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this->netSftp->pwd();
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Rename a file or directory.
@@ -455,7 +455,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath_old  A absolute path to file (in old name)
      * @param string $absolutePath_new  A absolute path to file (in new name)
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -466,7 +466,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Rename a file or directory.
@@ -474,7 +474,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath_old  A absolute path to file (in old name)
      * @param string $absolutePath_new  A absolute path to file (in new name)
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -485,7 +485,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * List all files in a directory.
@@ -514,7 +514,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $theDirectoryFiles;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Return specific file information on remote host.
@@ -530,7 +530,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this->netSftp->stat($remoteFileName);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Return specific file information on remote host.
@@ -546,14 +546,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this->netSftp->lstat($remoteFileName);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Update the access/modification date of a file or directory (touch).
      *
      * @param string $path  A relative or absolute filename
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -564,7 +564,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Upload string-to-file.
@@ -572,7 +572,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * @param string $absolutePath_remoteFile  A absolute path to remote file (new)
      * @param string $str                      A variable string
      *
-     * @return SftpInterface
+     * @return SftpInterface The current instance
      *
      * @api
      */
@@ -583,7 +583,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this;
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Download file-to-string.
@@ -599,7 +599,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         return $this->netSftp->get($absolutePath_remoteFile);
     }
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 
     /**
      * Method implementations inserted:
@@ -630,5 +630,5 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     use ServiceFunctions;
 
-    // --------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
 }
