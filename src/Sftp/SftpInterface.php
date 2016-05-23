@@ -16,7 +16,11 @@ namespace UCSDMath\Sftp;
 /**
  * SftpInterface is the interface implemented by all Sftp classes.
  *
+ * Method noted as: (+) @api.
+ *
  * @author Daryl Eisner <deisner@ucsd.edu>
+ *
+ * @api
  */
 interface SftpInterface
 {

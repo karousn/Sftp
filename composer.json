@@ -21,7 +21,7 @@
         "ucsdmath/dependency-injection": "1.7.x-dev"
     },
     "require-dev": {
-        "mockery/mockery": "0.9.4",
+        "mockery/mockery": "0.9.5",
         "phpunit/phpunit": "5.3.4",
         "ucsdmath/testing": "1.7.x-dev",
         "squizlabs/php_codesniffer": "2.6.0"

@@ -29,7 +29,7 @@ class Sftp extends AbstractSftp implements SftpInterface
     /**
      * Constants.
      *
-     * @var string VERSION  A version number
+     * @var string VERSION A version number
      *
      * @api
      */
