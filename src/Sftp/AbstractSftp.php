@@ -22,40 +22,35 @@ use UCSDMath\Functions\ServiceFunctionsInterface;
 
 /**
  * AbstractSftp provides an abstract base class implementation of {@link SftpInterface}.
- * Primarily, this services the fundamental implementations for all Sftp classes.
- *
- * This component library is used to service provides secure file access, file transfer,
- * and file management functionalities over any reliable data streams. SFTP is an
- * extension of the Secure Shell protocol (SSH). This is an adapter to the phpseclib
- * library suite.
+ * This service groups a common code base implementation that Sftp extends.
  *
  * Method list: (+) @api, (-) protected or private visibility.
  *
  * (+) SftpInterface __construct();
  * (+) void __destruct();
- * (+) connect(array $accountCredentials = null);
- * (+) uploadFile($absolutePath_remoteFile, $absolutePath_localFile);
- * (+) deleteFile($absolutePath);
- * (+) getFileSize($absolutePath);
- * (+) downloadFile($absolutePath_remoteFile, $absolutePath_localFile);
- *
- * (+) createDirectory($absolutePath);
- * (+) deleteDirectory($absolutePath, $recursive = false);
- * (+) changeDirectory($absolutePath);
- *
- * (+) chmod($mode, $absolutePath, $recursive = false);
- * (+) appendToStorageRegister(array $arraySubset);
- *
- * (+) toBoolean($trialBool = null);
- * (+) logError($method, $message, $trace);
- * (+) isValidFtpAccountCredentials(array $accountCredentials);
- *
- * (+) getPwd();
- * (+) renameFile($absolutePath_old, $absolutePath_new);
- * (+) renameDirectory($absolutePath_old, $absolutePath_new);
- * (+) touch($absolutePath);
- * (+) uploadString($absolutePath_remoteFile, $str);
- * (+) downloadString($absolutePath_remoteFile);
+ * (+) string getPwd();
+ * (+) SftpInterface touch(string $path);
+ * (+) bool toBoolean($trialBool = null);
+ * (+) array getStat(string $remoteFileName);
+ * (+) int getFileSize(string $absolutePath);
+ * (+) array getLstat(string $remoteFileName);
+ * (+) array getLs(string $absolutePath = null);
+ * (+) SftpInterface deleteFile(string $absolutePath);
+ * (+) SftpInterface connect(array $accountCredentials);
+ * (+) SftpInterface changeDirectory(string $absolutePath);
+ * (+) SftpInterface createDirectory(string $absolutePath);
+ * (+) string downloadString(string $absolutePath_remoteFile);
+ * (+) SftpInterface uploadString(string $absolutePath_remoteFile, string $str);
+ * (+) SftpInterface checkForSameFileSize(string $remoteFile, string $localFile);
+ * (+) SftpInterface renameFile(string $absolutePath_old, string $absolutePath_new);
+ * (+) SftpInterface deleteDirectory(string $absolutePath, bool $recursive = false);
+ * (+) SftpInterface chmod(string $mode, string $absolutePath, bool $recursive = false);
+ * (+) SftpInterface renameDirectory(string $absolutePath_old, string $absolutePath_new);
+ * (+) SftpInterface uploadFile(string $absolutePath_remoteFile, string $absolutePath_localFile);
+ * (+) SftpInterface downloadFile(string $absolutePath_remoteFile, string $absolutePath_localFile);
+ * (-) SftpInterface appendToStorageRegister(array $arraySubset);
+ * (-) bool isValidFtpAccountCredentials(array $accountCredentials);
+ * (-) bool logError(string $method, string $message, string $trace);
  *
  * @author Daryl Eisner <deisner@ucsd.edu>
  */
