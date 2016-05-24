@@ -15,14 +15,17 @@ namespace UCSDMath\Sftp;
 
 /**
  * Sftp is the default implementation of {@link SftpInterface} which
- * provides routine sftp methods that are commonly used throughout the framework.
+ * provides routine Sftp methods that are commonly used in the framework.
+ *
+ * {@link AbstractSftp} is basically a adapter class for phpseclib routines
+ * which this class extends.
  *
  * Method list: (+) @api, (-) protected or private visibility.
  *
+ * (+) SftpInterface __construct();
+ * (+) void __destruct();
  *
  * @author Daryl Eisner <deisner@ucsd.edu>
- *
- * @api
  */
 class Sftp extends AbstractSftp implements SftpInterface
 {
