@@ -70,13 +70,12 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Properties.
      *
-     * @var    phpseclib\Net\SFTP  $netSftp          A set of validation stored data elements
-     * @var    array               $storageRegister  A set of validation stored data elements
-     * @static SftpInterface       $instance         A SftpInterface
-     * @static int                 $objectCount      A SftpInterface count
+     * @var    phpseclib\Net\SFTP $netSftp         A set of validation stored data elements
+     * @static SftpInterface      $instance        A static instance SftpInterface
+     * @static int                $objectCount     A static count of SftpInterface
+     * @var    array              $storageRegister A stored set of data structures used by this class
      */
     protected $netSftp = null;
-    protected $storageRegister = array();
     protected $requiredFtpAccountCredentials = [
         'id',
         'uuid',
@@ -89,8 +88,9 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         'default_directory',
         'is_secure_connection'
     ];
-    protected static $instance = null;
+    protected static $instance    = null;
     protected static $objectCount = 0;
+    protected $storageRegister    = [];
 
     //--------------------------------------------------------------------------
 

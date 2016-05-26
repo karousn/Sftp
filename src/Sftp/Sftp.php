@@ -57,4 +57,16 @@ class Sftp extends AbstractSftp implements SftpInterface
     }
 
     //--------------------------------------------------------------------------
+
+    /**
+     * Destructor.
+     *
+     * @api
+     */
+    public function __destruct()
+    {
+        parent::__destruct();
+    }
+
+    //--------------------------------------------------------------------------
 }
