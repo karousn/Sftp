@@ -101,8 +101,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function __construct()
     {
-        static::$instance = new static;
-        static::$objectCount++;
     }
 
     //--------------------------------------------------------------------------
