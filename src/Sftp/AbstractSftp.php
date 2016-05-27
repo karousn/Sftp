@@ -599,7 +599,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Method implementations inserted:
      *
-     * Method noted as: (+) @api, (-) protected or private visibility.
+     * Method list: (+) @api, (-) protected or private visibility.
      *
      * (+) array all();
      * (+) object init();
@@ -608,10 +608,10 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * (+) bool has(string $key);
      * (+) string getClassName();
      * (+) int getInstanceCount();
-     * (+) bool isValidEmail($email);
      * (+) array getClassInterfaces();
      * (+) mixed getConst(string $key);
      * (+) bool isValidUuid(string $uuid);
+     * (+) bool isValidEmail(string $email);
      * (+) bool isValidSHA512(string $hash);
      * (+) mixed __call($callback, $parameters);
      * (+) bool doesFunctionExist($functionName);
@@ -620,8 +620,8 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * (+) mixed getProperty(string $name, string $key = null);
      * (+) object set(string $key, $value, string $subkey = null);
      * (+) object setProperty(string $name, $value, string $key = null);
-     * (-) \Exception throwExceptionError(array $error);
-     * (-) \InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
+     * (-) Exception throwExceptionError(array $error);
+     * (-) InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
      */
     use ServiceFunctions;
 
