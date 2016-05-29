@@ -7,14 +7,13 @@
     "license": "MIT",
     "time": "2016-03-01",
     "authors": [
-        {"name": "Daryl Eisner", "email": "deisner@ucsd.edu"}
+        {
+            "name": "Daryl Eisner",
+            "email": "deisner@ucsd.edu"
+        }
     ],
-    "support": {
-        "source": "https://github.com/UCSDMath/Sftp",
-        "email": "deisner@ucsd.edu"
-    },
     "require": {
-        "php": "^7.0",
+        "php": ">=7.0.0",
         "phpseclib/phpseclib": "2.0.1",
         "ucsdmath/functions": "1.7.x-dev",
         "ucsdmath/configuration": "1.7.x-dev",
@@ -38,5 +37,6 @@
         "branch-alias": {
             "dev-master": "1.7-dev"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
