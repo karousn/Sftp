@@ -5,9 +5,6 @@ composer-test.lock
 phpunit.xml
 .php_cs.cache
 packages.json
-.DS_Store
-.idea
 src/dev/
 dist/
-Thumbs.db
 ucsdmath-build-x.yml
