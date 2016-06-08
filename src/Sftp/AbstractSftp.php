@@ -14,11 +14,11 @@ declare(strict_types=1);
 namespace UCSDMath\Sftp;
 
 use phpseclib\Net\SCP;
-use phpseclib\Net\SFTP as NetSftp;
 use phpseclib\Net\SSH2;
-use UCSDMath\DependencyInjection\ServiceRequestContainer;
+use phpseclib\Net\SFTP as NetSftp;
 use UCSDMath\Functions\ServiceFunctions;
 use UCSDMath\Functions\ServiceFunctionsInterface;
+use UCSDMath\DependencyInjection\ServiceRequestContainer;
 
 /**
  * AbstractSftp provides an abstract base class implementation of {@link SftpInterface}.
