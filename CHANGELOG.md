@@ -13,6 +13,8 @@ be documented in this file.
  - Update to UCSD-Decorator (v4.5.3)
  - Update to RequireJS (v2.2.0)
  - Update to Tiny-MCE (v4.4.0)
+ - Update to Monolog (v1.20.0)
+ - Update to Symfony (v3.1.2)
  - Initial Release of `UCSDMath\Asset`
  - Initial Release of `UCSDMath\Cache`
  - Initial Release of `UCSDMath\Passport`
