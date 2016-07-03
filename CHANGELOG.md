@@ -4,6 +4,28 @@
 All notable changes to `UCSDMath\Sftp` (bug and security fixes) will
 be documented in this file.
 
+### 1.7.0 (2016-07-03)
+
+ - Update to jQuery (v2.2.4)
+ - Update to jQuery-Timepicker-Addon (v1.6.3)
+ - Update to Moment (v2.13.0)
+ - Update to Count-Up (v1.7.1)
+ - Update to UCSD-Decorator (v4.5.3)
+ - Update to RequireJS (v2.2.0)
+ - Update to Tiny-MCE (v4.4.0)
+ - Initial Release of `UCSDMath\Asset`
+ - Initial Release of `UCSDMath\Cache`
+ - Initial Release of `UCSDMath\Passport`
+ - Improved many features/refactoring `UCSDMath\Database`
+ - Improved many features/refactoring `UCSDMath\DependencyInjection`
+ - Improved many features/refactoring `UCSDMath\Framework`
+ - Improved many features/refactoring `UCSDMath\Functions`
+ - Improved many features/refactoring `UCSDMath\TemplateFactory`
+ - Fixed many major and minor bugs
+ - Improved many clearing component checks with Scrutinizer
+ - Improved many clearing component checks with SensioLabsInsight
+ - Improved many methods using `PHP 7` return types
+
 ### 1.6.0 (2016-02-19)
 
  - Now converted to `PHP 7` Strict Type; use return types, scalar hints, and random_bytes();
