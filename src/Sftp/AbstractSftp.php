@@ -161,7 +161,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         $this->isValidFtpAccountCredentials($accountCredentials)
             ? $this->appendToStorageRegister($accountCredentials)
             : $this->logError('AbstractSftp::connect()', 'invalid account credentials', 'E076');
-
         list($account_host, $account_username, $account_password) = [
             $this->get('account_host'),
             $this->get('account_username'),
@@ -305,9 +304,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function uploadFile(string $absolutePath_remoteFile, string $absolutePath_localFile): SftpInterface
     {
-        if (file_exists($absolutePath_localFile)
-            && is_readable($absolutePath_localFile)
-        ) {
+        if (file_exists($absolutePath_localFile) && is_readable($absolutePath_localFile)) {
             /**
              *  Common stream source types.
              *
@@ -316,7 +313,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
              *    - static::SOURCE_LOCAL_FILE
              */
             $this->netSftp->put($absolutePath_remoteFile, $absolutePath_localFile, static::SOURCE_LOCAL_FILE);
-
         } else {
             $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePath_localFile, 'E085');
         }
@@ -496,10 +492,8 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         if (!is_null($absolutePath)) {
             $theOldDirectoryPath = $this->getPwd();
             $this->changeDirectory($absolutePath);
-
             $theDirectoryFiles = $this->netSftp->nlist();
             $this->changeDirectory($theOldDirectoryPath);
-
         } else {
             $theDirectoryFiles = $this->netSftp->nlist();
         }
