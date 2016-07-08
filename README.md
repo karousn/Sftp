@@ -4,18 +4,21 @@
     <td width="310"><img height="160" width="310"alt="UCSDMath - Mathlink" src="https://github.com/ucsdmath/Testing/blob/master/ucsdmath-logo.png"></td>
     <td><h3>A Development Project in PHP</h3><p><strong>UCSDMath</strong> provides a testing framework for general internal Intranet software applications for the UCSD, Department of Mathematics. This is used for development and testing only. [not for production]</p>
 
-<center>
-<table style="width:380px;"><tr>
-    <td width="130">Travis CI</td><td width="250">SensioLabs</td>
-</tr>
-<tr><td width="130"><a href="https://travis-ci.org/ucsdmath/Sftp">
-<img style="float: left; margin: 0px 0px 15px 15px;" src="https://travis-ci.org/ucsdmath/Sftp.svg?branch=master"></a></td>
-<td width="250" align="center">
-<a href="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3">
-<img src="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3/big.png" style="float: right; margin: 0px 0px 15px 15px;" width="212" height="51"></a></td>
-</tr></table>
-</center>
-</td></tr></table>
+<table style="width:550px;"><tr>
+    <td width="120">Travis CI</td>
+    <td width="250">SensioLabs</td>
+    <td width="180">Dependencies</td>
+</tr><tr>
+    <td width="120">
+        <a href="https://travis-ci.org/ucsdmath/Sftp">
+        <img style="float: left; margin: 0px 0px 15px 15px;" src="https://travis-ci.org/ucsdmath/Sftp.svg?branch=master"></a></td>
+    <td width="250" align="center">
+        <a href="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3">
+        <img src="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3/big.png" style="float: right; margin: 0px 0px 15px 15px;" width="212" height="51"></a></td>
+    <td width="180">
+        <a href="https://www.versioneye.com/php/ucsdmath:sftp">
+        <img style="float: left; margin: 0px 0px 15px 15px;" src="https://www.versioneye.com/php/ucsdmath:sftp/badge.png?branch=master"></a></td>
+</tr></table></td></tr></table>
 
 |Scrutinizer|Latest|PHP|Usage|Development|Code Quality|License|
 |-----------|------|---|-----|-----------|------------|-------|
