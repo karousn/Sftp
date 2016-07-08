@@ -13,8 +13,8 @@
         <a href="https://travis-ci.org/ucsdmath/Sftp">
         <img style="float: left; margin: 0px 0px 15px 15px;" src="https://travis-ci.org/ucsdmath/Sftp.svg?branch=master"></a></td>
     <td width="250" align="center">
-        <a href="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3">
-        <img src="https://insight.sensiolabs.com/projects/0d6b45a9-552b-4cb4-8161-b2ad095e78c3/big.png" style="float: right; margin: 0px 0px 15px 15px;" width="212" height="51"></a></td>
+        <a href="https://insight.sensiolabs.com/projects/15bc6756-0ef4-4aca-87c6-dd92a9e10da9">
+        <img src="https://insight.sensiolabs.com/projects/15bc6756-0ef4-4aca-87c6-dd92a9e10da9/big.png" style="float: right; margin: 0px 0px 15px 15px;" width="212" height="51"></a></td>
     <td width="180">
         <a href="https://www.versioneye.com/php/ucsdmath:sftp">
         <img style="float: left; margin: 0px 0px 15px 15px;" src="https://www.versioneye.com/php/ucsdmath:sftp/badge.png?branch=master"></a></td>
