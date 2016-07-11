@@ -6,6 +6,8 @@ engines:
     checks:
       Naming/ShortMethodName:
         enabled: false
+      Naming/LongVariable:
+        enabled: false
   phpcodesniffer:
     enabled: true
     config:
