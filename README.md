@@ -13,7 +13,7 @@
         <img src="https://insight.sensiolabs.com/projects/87999cd1-7de4-4085-a642-9d7c7beb54f0/big.png" style="float: right; margin: 0px 0px 10px 10px;" width="212" height="51"></a></td>
     <td width="180" align="center">
         <a href="https://www.versioneye.com/php/ucsdmath:sftp">
-        <img src="https://www.versioneye.com/php/ucsdmath:sftp/badge.png?branch=master&style=flat" style="float:left;margin:0px 0px 10px 10px;"></a><br>
+        <img src="https://www.versioneye.com/php/ucsdmath:sftp/dev-master/badge.png?style=flat" style="float:left;margin:0px 0px 10px 10px;"></a><br>
         <a href="https://codeclimate.com/github/ucsdmath/Sftp">
         <img src="https://codeclimate.com/github/ucsdmath/Sftp/badges/gpa.svg"></a>
 </td></tr></table></td></tr></table>
