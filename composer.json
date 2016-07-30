@@ -1,11 +1,11 @@
 {
     "name": "ucsdmath/sftp",
     "type": "library",
-    "description": "Sftp is a adapter for the phpseclib library. Sftp is a testing and development library only",
+    "description": "Sftp is a adapter for the phpseclib library. Sftp is a testing and development library only.",
     "keywords": ["sftp", "ucsdmath", "phpseclib", "component"],
     "homepage": "https://github.com/ucsdmath",
     "license": "MIT",
-    "time": "2016-07-03",
+    "time": "2016-07-31",
     "authors": [
         {
             "name": "Daryl Eisner",
