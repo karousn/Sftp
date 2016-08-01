@@ -4,6 +4,26 @@
 All notable changes to `UCSDMath\Sftp` (bug and security fixes) will
 be documented in this file.
 
+### 1.8.0 (2016-07-31)
+
+ - Update to jQuery (v3.1.0)
+ - Update to Bootstrap (v3.3.7)
+ - Update to jQuery-UI (v1.12.0)
+ - Update to Moment (v2.14.1)
+ - Update to UCSD-Decorator (v4.5.4)
+ - Update to Tiny-MCE (v4.4.1)
+ - Update to Hashids (v1.1.0) js
+ - Update to Symfony (v3.1.3)
+ - Update to Phpunit (v5.4.8)
+ - Improved many features/refactoring `UCSDMath\TemplateFactory`
+ - Fixed many major and minor bugs
+ - Improved many clearing component checks with Scrutinizer
+ - Improved many clearing component checks with SensioLabsInsight
+ - Improved many methods using `PHP 7` return types
+ - The minor step to stable is to add updated feature of theme using new UCSD Decorator 4.5.4 (latest as of date).
+ - Fixed many bugs/security on: Scrutinizer CI, Travis CI, Code Climate, SensioLabsInsight, and Codacy.
+ - All dependencies are up-to-date/verified through VersionEye.
+
 ### 1.7.0 (2016-07-03)
 
  - Update to jQuery (v2.2.4)
