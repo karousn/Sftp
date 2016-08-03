@@ -18,6 +18,8 @@
         <img src="https://www.versioneye.com/user/projects/577fbb8b5bb1390038414460/badge.png?style=flat" style="float:left;margin:0px 0px 10px 10px;"></a><br>
         <a href="https://codeclimate.com/github/ucsdmath/Sftp">
         <img src="https://codeclimate.com/github/ucsdmath/Sftp/badges/gpa.svg"></a>
+        <a href="https://travis-ci.org/ucsdmath/Sftp">
+        <img src="http://php7ready.timesplinter.ch/ucsdmath/Sftp/badge.svg"></a>
 </td></tr></table></td></tr></table>
 <table width="880"><tr><td width="116" align="center"><b>Scrutinizer</b></td><td width="112" align="center"><b>Latest</b></td><td width="108" align="center"><b>PHP</b></td><td width="150" align="center"><b>Usage</b></td><td width="142" align="center"><b>Development</b></td><td width="142" align="center"><b>Code Quality</b></td><td width="110" align="center"><b>License</b></td></tr><tr>
     <td valign="top" width="116" align="center">
