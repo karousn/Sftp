@@ -4,6 +4,21 @@
 All notable changes to `UCSDMath\Sftp` (bug and security fixes) will
 be documented in this file.
 
+### 1.9.0 (2016-08-21)
+
+ - Update to Phpunit (v5.5.2)
+ - Fixed `UCSDMath\Pdf` setFooter() due to changes in mPDF
+ - Update `UCSDMath\Session` no longer uses superglobal variable
+ - Update `UCSDMath\Passport` to use session via `NamespacedAttributeBag`
+ - Update `UCSDMath\Session` to use session via `NamespacedAttributeBag`
+ - Update `UCSDMath\Session` to work in a namespace enviroment under `UCSDMath`
+ - Update `UCSDMath\Mail` features were greatly improved
+ - Added use of PNotify (v3.0.0)
+ - Fixed issue with .htaccess for directory name schemes and `UCSDMath\Asset` cache busting
+ - Fixed javascript pagination/search state properties for directory list view
+ - Fixed many bugs/security issues with use of: Scrutinizer CI, Travis CI, Code Climate, SensioLabsInsight, and Codacy.
+ - All dependencies are up-to-date/verified through VersionEye.
+
 ### 1.8.0 (2016-07-31)
 
  - Update to jQuery (v3.1.0)
