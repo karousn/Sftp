@@ -304,18 +304,15 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function uploadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile): SftpInterface
     {
-        if (file_exists($absolutePathLocalFile) && is_readable($absolutePathLocalFile)) {
-            /**
-             *  Common stream source types.
-             *
-             *    - static::SOURCE_STRING
-             *    - static::SOURCE_CALLBACK
-             *    - static::SOURCE_LOCAL_FILE
-             */
-            $this->netSftp->put($absolutePathRemoteFile, $absolutePathLocalFile, static::SOURCE_LOCAL_FILE);
-        } else {
-            $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePathLocalFile, 'E085');
-        }
+        /**
+         * Common stream source types:
+         *    - static::SOURCE_STRING
+         *    - static::SOURCE_CALLBACK
+         *    - static::SOURCE_LOCAL_FILE
+         */
+        (file_exists($absolutePathLocalFile) && is_readable($absolutePathLocalFile))
+            ? $this->netSftp->put($absolutePathRemoteFile, $absolutePathLocalFile, static::SOURCE_LOCAL_FILE)
+            : $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePathLocalFile, 'E085');
 
         $this->checkForSameFileSize($absolutePathRemoteFile, $absolutePathLocalFile);
 
@@ -397,7 +394,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      *
      * @api
      */
-    public function chmod(string $mode, string $absolutePath, bool $recursive = false): SftpInterface
+    public function chmod(string $mode, string $absolutePath, $recursive): SftpInterface
     {
         $this->changeDirectory(dirname($absolutePath));
         $this->netSftp->chmod($mode, basename($absolutePath), $this->toBoolean($recursive));
@@ -489,14 +486,9 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      */
     public function getLs(string $absolutePath = null): array
     {
-        if (!is_null($absolutePath)) {
-            $theOldDirectoryPath = $this->getPwd();
-            $this->changeDirectory($absolutePath);
-            $theDirectoryFiles = $this->netSftp->nlist();
-            $this->changeDirectory($theOldDirectoryPath);
-        } else {
-            $theDirectoryFiles = $this->netSftp->nlist();
-        }
+        $theDirectoryFiles = (!is_null($absolutePath))
+            ? $this->changeDirectory($absolutePath)->netSftp->nlist()
+            : $this->netSftp->nlist();
 
         return $theDirectoryFiles;
     }
@@ -557,7 +549,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
      * Upload string-to-file.
      *
      * @param string $absolutePathRemoteFile The absolute path to remote file (new)
-     * @param string $str                     The variable string
+     * @param string $str                    The variable string
      *
      * @return SftpInterface The current instance
      *
