@@ -36,11 +36,8 @@ use UCSDMath\Sftp\ExtendedOperations\SftpExtendedOperationsTraitInterface;
  * (+) SftpInterface connect(array $accountCredentials);
  * (+) SftpInterface changeDirectory(string $absolutePath);
  * (+) SftpInterface createDirectory(string $absolutePath);
- * (+) SftpInterface checkForSameFileSize(string $remoteFile, string $localFile);
- * (+) SftpInterface renameFile(string $absolutePathOld, string $absolutePathNew);
  * (+) SftpInterface deleteDirectory(string $absolutePath, bool $recursive = false);
  * (+) SftpInterface chmod(string $mode, string $absolutePath, bool $recursive = false);
- * (+) SftpInterface renameDirectory(string $absolutePathOld, string $absolutePathNew);
  * (+) SftpInterface uploadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
  * (+) SftpInterface downloadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
  * (-) SftpInterface appendToStorageRegister(array $arraySubset);
@@ -289,31 +286,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
     //--------------------------------------------------------------------------
 
     /**
-     * Compare.
-     *
-     * @param string $remoteFile The absolute path to remote file (new)
-     * @param string $localFile  The absolute path to local file
-     *
-     * @return SftpInterface The current instance
-     *
-     * @api
-     */
-    public function checkForSameFileSize(string $remoteFile, string $localFile): SftpInterface
-    {
-        if ($this->getFileSize($remoteFile) !== filesize($localFile)) {
-            $this->logError(
-                'AbstractSftp::checkForSameFileSize()',
-                'Error: The remote/local file size do not match: ' . $this->getFileSize($remoteFile) . '/' . filesize($localFile),
-                'E086'
-            );
-        }
-
-        return $this;
-    }
-
-    //--------------------------------------------------------------------------
-
-    /**
      * Delete remote file.
      *
      * @param string $absolutePath The absolute path to remote file
@@ -403,44 +375,6 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
     //--------------------------------------------------------------------------
 
     /**
-     * Rename a file or directory.
-     *
-     * @param string $absolutePathOld The absolute path to file (in old name)
-     * @param string $absolutePathNew The absolute path to file (in new name)
-     *
-     * @return SftpInterface The current instance
-     *
-     * @api
-     */
-    public function renameFile(string $absolutePathOld, string $absolutePathNew): SftpInterface
-    {
-        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
-
-        return $this;
-    }
-
-    //--------------------------------------------------------------------------
-
-    /**
-     * Rename a file or directory.
-     *
-     * @param string $absolutePathOld The absolute path to file (in old name)
-     * @param string $absolutePathNew The absolute path to file (in new name)
-     *
-     * @return SftpInterface The current instance
-     *
-     * @api
-     */
-    public function renameDirectory(string $absolutePathOld, string $absolutePathNew): SftpInterface
-    {
-        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
-
-        return $this;
-    }
-
-    //--------------------------------------------------------------------------
-
-    /**
      * Method implementations inserted:
      *
      * Method list: (+) @api, (-) protected or private visibility.
@@ -452,6 +386,9 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
      * (+) array getLs(string $absolutePath = null);
      * (+) string downloadString(string $absolutePathRemoteFile);
      * (+) SftpInterface uploadString(string $absolutePathRemoteFile, string $str);
+     * (+) SftpInterface checkForSameFileSize(string $remoteFile, string $localFile);
+     * (+) SftpInterface renameFile(string $absolutePathOld, string $absolutePathNew);
+     * (+) SftpInterface renameDirectory(string $absolutePathOld, string $absolutePathNew);
      */
     use SftpExtendedOperationsTrait;
 

@@ -34,6 +34,9 @@ use UCSDMath\Sftp\SftpInterface;
  * (+) array getLs(string $absolutePath = null);
  * (+) string downloadString(string $absolutePathRemoteFile);
  * (+) SftpInterface uploadString(string $absolutePathRemoteFile, string $str);
+ * (+) SftpInterface checkForSameFileSize(string $remoteFile, string $localFile);
+ * (+) SftpInterface renameFile(string $absolutePathOld, string $absolutePathNew);
+ * (+) SftpInterface renameDirectory(string $absolutePathOld, string $absolutePathNew);
  *
  * SftpExtendedOperationsTrait provides a common set of implementations where needed. The SftpExtendedOperationsTrait
  * trait and the SftpExtendedOperationsTraitInterface should be paired together.
@@ -51,6 +54,25 @@ trait SftpExtendedOperationsTrait
     /**
      * Abstract Method Requirements.
      */
+
+    //--------------------------------------------------------------------------
+
+    /**
+     * Rename a file or directory.
+     *
+     * @param string $absolutePathOld The absolute path to file (in old name)
+     * @param string $absolutePathNew The absolute path to file (in new name)
+     *
+     * @return SftpInterface The current instance
+     *
+     * @api
+     */
+    public function renameFile(string $absolutePathOld, string $absolutePathNew): SftpInterface
+    {
+        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+
+        return $this;
+    }
 
     //--------------------------------------------------------------------------
 
@@ -185,6 +207,50 @@ trait SftpExtendedOperationsTrait
          *                      null    === false
          */
         return filter_var($trialBool, FILTER_VALIDATE_BOOLEAN);
+    }
+
+    //--------------------------------------------------------------------------
+
+    /**
+     * Rename a file or directory.
+     *
+     * @param string $absolutePathOld The absolute path to file (in old name)
+     * @param string $absolutePathNew The absolute path to file (in new name)
+     *
+     * @return SftpInterface The current instance
+     *
+     * @api
+     */
+    public function renameDirectory(string $absolutePathOld, string $absolutePathNew): SftpInterface
+    {
+        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+
+        return $this;
+    }
+
+    //--------------------------------------------------------------------------
+
+    /**
+     * Compare.
+     *
+     * @param string $remoteFile The absolute path to remote file (new)
+     * @param string $localFile  The absolute path to local file
+     *
+     * @return SftpInterface The current instance
+     *
+     * @api
+     */
+    public function checkForSameFileSize(string $remoteFile, string $localFile): SftpInterface
+    {
+        if ($this->getFileSize($remoteFile) !== filesize($localFile)) {
+            $this->logError(
+                'AbstractSftp::checkForSameFileSize()',
+                'Error: The remote/local file size do not match: ' . $this->getFileSize($remoteFile) . '/' . filesize($localFile),
+                'E086'
+            );
+        }
+
+        return $this;
     }
 
     //--------------------------------------------------------------------------
