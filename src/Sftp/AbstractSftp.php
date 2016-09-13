@@ -39,15 +39,15 @@ use UCSDMath\DependencyInjection\ServiceRequestContainer;
  * (+) SftpInterface connect(array $accountCredentials);
  * (+) SftpInterface changeDirectory(string $absolutePath);
  * (+) SftpInterface createDirectory(string $absolutePath);
- * (+) string downloadString(string $absolutePath_remoteFile);
- * (+) SftpInterface uploadString(string $absolutePath_remoteFile, string $str);
+ * (+) string downloadString(string $absolutePathRemoteFile);
+ * (+) SftpInterface uploadString(string $absolutePathRemoteFile, string $str);
  * (+) SftpInterface checkForSameFileSize(string $remoteFile, string $localFile);
- * (+) SftpInterface renameFile(string $absolutePath_old, string $absolutePath_new);
+ * (+) SftpInterface renameFile(string $absolutePathOld, string $absolutePathNew);
  * (+) SftpInterface deleteDirectory(string $absolutePath, bool $recursive = false);
  * (+) SftpInterface chmod(string $mode, string $absolutePath, bool $recursive = false);
- * (+) SftpInterface renameDirectory(string $absolutePath_old, string $absolutePath_new);
- * (+) SftpInterface uploadFile(string $absolutePath_remoteFile, string $absolutePath_localFile);
- * (+) SftpInterface downloadFile(string $absolutePath_remoteFile, string $absolutePath_localFile);
+ * (+) SftpInterface renameDirectory(string $absolutePathOld, string $absolutePathNew);
+ * (+) SftpInterface uploadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
+ * (+) SftpInterface downloadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
  * (-) SftpInterface appendToStorageRegister(array $arraySubset);
  * (-) bool isValidFtpAccountCredentials(array $accountCredentials);
  * (-) bool logError(string $method, string $message, string $trace);
@@ -161,14 +161,14 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
         $this->isValidFtpAccountCredentials($accountCredentials)
             ? $this->appendToStorageRegister($accountCredentials)
             : $this->logError('AbstractSftp::connect()', 'invalid account credentials', 'E076');
-        list($account_host, $account_username, $account_password) = [
+        list($accountHost, $accountUsername, $accountPassword) = [
             $this->get('account_host'),
             $this->get('account_username'),
             $this->get('account_password')
         ];
 
-        $this->setProperty('netSftp', new NetSftp($account_host));
-        $this->netSftp->login($account_username, $account_password);
+        $this->setProperty('netSftp', new NetSftp($accountHost));
+        $this->netSftp->login($accountUsername, $accountPassword);
 
         return $this;
     }
@@ -295,16 +295,16 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Upload file to remote account.
      *
-     * @param string $absolutePath_remoteFile The absolute path to remote file (new)
-     * @param string $absolutePath_localFile  The absolute path to local file
+     * @param string $absolutePathRemoteFile The absolute path to remote file (new)
+     * @param string $absolutePathLocalFile  The absolute path to local file
      *
      * @return SftpInterface The current instance
      *
      * @api
      */
-    public function uploadFile(string $absolutePath_remoteFile, string $absolutePath_localFile): SftpInterface
+    public function uploadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile): SftpInterface
     {
-        if (file_exists($absolutePath_localFile) && is_readable($absolutePath_localFile)) {
+        if (file_exists($absolutePathLocalFile) && is_readable($absolutePathLocalFile)) {
             /**
              *  Common stream source types.
              *
@@ -312,12 +312,12 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
              *    - static::SOURCE_CALLBACK
              *    - static::SOURCE_LOCAL_FILE
              */
-            $this->netSftp->put($absolutePath_remoteFile, $absolutePath_localFile, static::SOURCE_LOCAL_FILE);
+            $this->netSftp->put($absolutePathRemoteFile, $absolutePathLocalFile, static::SOURCE_LOCAL_FILE);
         } else {
-            $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePath_localFile, 'E085');
+            $this->logError('AbstractSftp::uploadFile()', 'cannot read/find local file (check local path): ' . $absolutePathLocalFile, 'E085');
         }
 
-        $this->checkForSameFileSize($absolutePath_remoteFile, $absolutePath_localFile);
+        $this->checkForSameFileSize($absolutePathRemoteFile, $absolutePathLocalFile);
 
         return $this;
     }
@@ -370,16 +370,16 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Download file from remote account.
      *
-     * @param string $absolutePath_remoteFile The absolute path to remote file (new)
-     * @param string $absolutePath_localFile  The absolute path to local file
+     * @param string $absolutePathRemoteFile The absolute path to remote file (new)
+     * @param string $absolutePathLocalFile  The absolute path to local file
      *
      * @return SftpInterface The current instance
      *
      * @api
      */
-    public function downloadFile(string $absolutePath_remoteFile, string $absolutePath_localFile): SftpInterface
+    public function downloadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile): SftpInterface
     {
-        $this->netSftp->get($absolutePath_remoteFile, $absolutePath_localFile);
+        $this->netSftp->get($absolutePathRemoteFile, $absolutePathLocalFile);
 
         return $this;
     }
@@ -441,16 +441,16 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Rename a file or directory.
      *
-     * @param string $absolutePath_old The absolute path to file (in old name)
-     * @param string $absolutePath_new The absolute path to file (in new name)
+     * @param string $absolutePathOld The absolute path to file (in old name)
+     * @param string $absolutePathNew The absolute path to file (in new name)
      *
      * @return SftpInterface The current instance
      *
      * @api
      */
-    public function renameFile(string $absolutePath_old, string $absolutePath_new): SftpInterface
+    public function renameFile(string $absolutePathOld, string $absolutePathNew): SftpInterface
     {
-        $this->netSftp->rename($absolutePath_old, $absolutePath_new);
+        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
 
         return $this;
     }
@@ -460,16 +460,16 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Rename a file or directory.
      *
-     * @param string $absolutePath_old The absolute path to file (in old name)
-     * @param string $absolutePath_new The absolute path to file (in new name)
+     * @param string $absolutePathOld The absolute path to file (in old name)
+     * @param string $absolutePathNew The absolute path to file (in new name)
      *
      * @return SftpInterface The current instance
      *
      * @api
      */
-    public function renameDirectory(string $absolutePath_old, string $absolutePath_new): SftpInterface
+    public function renameDirectory(string $absolutePathOld, string $absolutePathNew): SftpInterface
     {
-        $this->netSftp->rename($absolutePath_old, $absolutePath_new);
+        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
 
         return $this;
     }
@@ -556,16 +556,16 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Upload string-to-file.
      *
-     * @param string $absolutePath_remoteFile The absolute path to remote file (new)
+     * @param string $absolutePathRemoteFile The absolute path to remote file (new)
      * @param string $str                     The variable string
      *
      * @return SftpInterface The current instance
      *
      * @api
      */
-    public function uploadString(string $absolutePath_remoteFile, string $str): SftpInterface
+    public function uploadString(string $absolutePathRemoteFile, string $str): SftpInterface
     {
-        $this->netSftp->put($absolutePath_remoteFile, $str);
+        $this->netSftp->put($absolutePathRemoteFile, $str);
 
         return $this;
     }
@@ -575,15 +575,15 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface
     /**
      * Download file-to-string.
      *
-     * @param string $absolutePath_remoteFile The absolute path to remote file
+     * @param string $absolutePathRemoteFile The absolute path to remote file
      *
      * @return string
      *
      * @api
      */
-    public function downloadString(string $absolutePath_remoteFile): string
+    public function downloadString(string $absolutePathRemoteFile): string
     {
-        return $this->netSftp->get($absolutePath_remoteFile);
+        return $this->netSftp->get($absolutePathRemoteFile);
     }
 
     //--------------------------------------------------------------------------
