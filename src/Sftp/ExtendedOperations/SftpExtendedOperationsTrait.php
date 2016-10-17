@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace UCSDMath\Sftp\ExtendedOperations;
 
 use UCSDMath\Sftp\SftpInterface;
+use phpseclib\Net\SFTP as NetSftp;
 
 /**
  * SftpExtendedOperationsTrait is the default implementation of {@link SftpExtendedOperationsTraitInterface} which
@@ -47,13 +48,19 @@ trait SftpExtendedOperationsTrait
 {
     /**
      * Properties.
+     *
+     * @var phpseclib\Net\SFTP $netSftp The set of validation stored data elements
      */
+    protected $netSftp = null;
 
     //--------------------------------------------------------------------------
 
     /**
      * Abstract Method Requirements.
      */
+    abstract public function getFileSize(string $absolutePath): int;
+    abstract public function changeDirectory(string $absolutePath): SftpInterface;
+    abstract public function logError(string $method, string $message, string $trace);
 
     //--------------------------------------------------------------------------
 
