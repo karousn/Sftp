@@ -76,7 +76,9 @@ trait SftpExtendedOperationsTrait
      */
     public function renameFile(string $absolutePathOld, string $absolutePathNew): SftpInterface
     {
-        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+        if ($this->netSftp instanceof NetSftp) {
+            $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+        }
 
         return $this;
     }
@@ -96,9 +98,13 @@ trait SftpExtendedOperationsTrait
      */
     public function getLs(string $absolutePath = null): array
     {
-        $theDirectoryFiles = (!is_null($absolutePath))
-            ? $this->changeDirectory($absolutePath)->netSftp->nlist()
-            : $this->netSftp->nlist();
+        $theDirectoryFiles = null;
+
+        if ($this->netSftp instanceof NetSftp) {
+            $theDirectoryFiles = (!is_null($absolutePath))
+                ? $this->changeDirectory($absolutePath)->netSftp->nlist()
+                : $this->netSftp->nlist();
+        }
 
         return $theDirectoryFiles;
     }
@@ -116,7 +122,9 @@ trait SftpExtendedOperationsTrait
      */
     public function getStat(string $remoteFileName): array
     {
-        return $this->netSftp->stat($remoteFileName);
+        if ($this->netSftp instanceof NetSftp) {
+            return $this->netSftp->stat($remoteFileName);
+        }
     }
 
     //--------------------------------------------------------------------------
@@ -132,7 +140,9 @@ trait SftpExtendedOperationsTrait
      */
     public function getLstat(string $remoteFileName): array
     {
-        return $this->netSftp->lstat($remoteFileName);
+        if ($this->netSftp instanceof NetSftp) {
+            return $this->netSftp->lstat($remoteFileName);
+        }
     }
 
     //--------------------------------------------------------------------------
@@ -148,7 +158,9 @@ trait SftpExtendedOperationsTrait
      */
     public function touch(string $path): SftpInterface
     {
-        $this->netSftp->touch($path);
+        if ($this->netSftp instanceof NetSftp) {
+            $this->netSftp->touch($path);
+        }
 
         return $this;
     }
@@ -167,7 +179,9 @@ trait SftpExtendedOperationsTrait
      */
     public function uploadString(string $absolutePathRemoteFile, string $str): SftpInterface
     {
-        $this->netSftp->put($absolutePathRemoteFile, $str);
+        if ($this->netSftp instanceof NetSftp) {
+            $this->netSftp->put($absolutePathRemoteFile, $str);
+        }
 
         return $this;
     }
@@ -185,7 +199,9 @@ trait SftpExtendedOperationsTrait
      */
     public function downloadString(string $absolutePathRemoteFile): string
     {
-        return $this->netSftp->get($absolutePathRemoteFile);
+        if ($this->netSftp instanceof NetSftp) {
+            return $this->netSftp->get($absolutePathRemoteFile);
+        }
     }
 
     //--------------------------------------------------------------------------
@@ -230,7 +246,9 @@ trait SftpExtendedOperationsTrait
      */
     public function renameDirectory(string $absolutePathOld, string $absolutePathNew): SftpInterface
     {
-        $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+        if ($this->netSftp instanceof NetSftp) {
+            $this->netSftp->rename($absolutePathOld, $absolutePathNew);
+        }
 
         return $this;
     }
