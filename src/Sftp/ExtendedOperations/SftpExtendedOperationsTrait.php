@@ -49,7 +49,7 @@ trait SftpExtendedOperationsTrait
     /**
      * Properties.
      *
-     * @var phpseclib\Net\SFTP $netSftp The set of validation stored data elements
+     * @var NetSftp $netSftp The set of validation stored data elements
      */
     protected $netSftp = null;
 
