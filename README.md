@@ -31,11 +31,20 @@
         <a href="https://travis-ci.org/ucsdmath/Sftp">
         <img src="http://php7ready.timesplinter.ch/ucsdmath/Sftp/badge.svg"></a>
 </td></tr></table></td></tr></table>
-<table width="880"><tr><td width="116" align="center"><b>Scrutinizer</b></td><td width="112" align="center"><b>Latest</b></td><td width="108" align="center"><b>PHP</b></td><td width="150" align="center"><b>Usage</b></td><td width="142" align="center"><b>Development</b></td><td width="142" align="center"><b>Code Quality</b></td><td width="110" align="center"><b>License</b></td></tr><tr>
+<table width="890"><tr>
+    <td width="116" align="center"><b>Scrutinizer</b></td>
+    <td width="122" align="center"><b>Latest</b></td>
+    <td width="108" align="center"><b>PHP</b></td>
+    <td width="150" align="center"><b>Usage</b></td>
+    <td width="142" align="center"><b>Development</b></td>
+    <td width="142" align="center"><b>Code Quality</b></td>
+    <td width="110" align="center"><b>License</b></td>
+</tr>
+<tr>
     <td valign="top" width="116" align="center">
         <a href="https://scrutinizer-ci.com/g/ucsdmath/Sftp/build-status/master">
         <img src="https://scrutinizer-ci.com/g/ucsdmath/Sftp/badges/build.png?b=master"></a></td>
-    <td valign="top" width="112" align="center">
+    <td valign="top" width="122" align="center">
         <a href="https://packagist.org/packages/ucsdmath/Sftp">
         <img src="https://poser.pugx.org/ucsdmath/Sftp/v/stable"></a></td>
     <td valign="top" width="108" align="center">
