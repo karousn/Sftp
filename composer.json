@@ -20,7 +20,7 @@
         "ucsdmath/dependency-injection": "1.11.x-dev"
     },
     "require-dev": {
-        "mockery/mockery": "0.9.5",
+        "mockery/mockery": "0.9.6",
         "phpunit/phpunit": "5.6.3",
         "fzaninotto/faker": "1.6.0",
         "ucsdmath/testing": "1.11.x-dev",
