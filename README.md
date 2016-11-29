@@ -29,7 +29,9 @@
         <a href="https://codeclimate.com/github/ucsdmath/Sftp">
         <img src="https://codeclimate.com/github/ucsdmath/Sftp/badges/gpa.svg"></a><br>
         <a href="https://travis-ci.org/ucsdmath/Sftp">
-        <img src="http://php7ready.timesplinter.ch/ucsdmath/Sftp/badge.svg"></a>
+        <img src="http://php7ready.timesplinter.ch/ucsdmath/Sftp/badge.svg"></a><br>
+        <a href="https://codeship.com/">
+        <img src="https://app.codeship.com/projects/5b510ee0-988f-0134-db30-2613a2e72cf0/status?branch=master"></a>
 </td></tr></table></td></tr></table>
 <table width="890"><tr>
     <td width="116" align="center"><b>Scrutinizer</b></td>
