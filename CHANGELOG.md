@@ -1,7 +1,7 @@
 ## CHANGELOG
 ============
 
-All notable changes to `UCSDMath\Sftp` (bug, security fixes, and component 
+All notable changes to `UCSDMath\Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
 ### 1.11.0 (2016-12-01)
