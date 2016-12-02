@@ -4,7 +4,7 @@
 All notable changes to `UCSDMath\Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
-### 1.11.0 (2016-12-01)
+### 1.11.0 (2016-12-02)
 
  - Update to `npm` (v4.0.2)
  - Update to `Moment` [(2.15.2)
@@ -33,7 +33,7 @@ updates) will be documented in this file.
  - Update to PHP Component: `phpunit/phpunit` (v5.7.1)
  - Update to PHP Component: `twig/extensions` (v1.4.1)
  - Update to PHP Component: `respect/validation` (v1.1.10)
- - Added new PHP Component: `doctrine/common` (v2.6.2)
+ - Added new PHP Component: `doctrine/common` (v2.7.0)
  - Added new PHP Component: `symfony/process` (v3.2.0)
  - Added new PHP Component: `hellogerard/jobby` (v3.2.1)
  - Added new PHP Component: `doctrine/annotations` (v1.3.0)
