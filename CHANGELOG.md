@@ -4,7 +4,7 @@
 All notable changes to `UCSDMath\Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
-### 1.12.0 (2016-01-02)
+### 1.12.0 (2017-01-02)
 
  - Update to `npm` [(v4.0.5)] [1]
  - Update to `Moment` [(2.17.1)] [2]
