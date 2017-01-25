@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "mockery/mockery": "0.9.7",
-        "phpunit/phpunit": "5.7.6",
+        "phpunit/phpunit": "5.7.7",
         "fzaninotto/faker": "1.6.0",
         "ucsdmath/testing": "1.13.x-dev",
         "squizlabs/php_codesniffer": "2.7.1"
