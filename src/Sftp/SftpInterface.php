@@ -36,7 +36,7 @@ interface SftpInterface
      * @var int    SOURCE_CALLBACK       The common stream source as a callback (type)
      * @var int    SOURCE_STRING         The common stream source as inline string (type)
      */
-    const FRAMEWORK_MINIMUM_PHP = '7.0.0';
+    const FRAMEWORK_MINIMUM_PHP = '7.1.0';
     const DEFAULT_CHARSET       = 'UTF-8';
     const CRLF                  = "\r\n";
     const REQUIRE_HTTPS         = true;

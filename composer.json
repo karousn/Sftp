@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": ">=7.1",
         "phpseclib/phpseclib": "2.0.4",
         "ucsdmath/functions": "1.14.x-dev",
         "ucsdmath/configuration": "1.14.x-dev",
@@ -24,7 +24,7 @@
         "phpunit/phpunit": "6.0.5",
         "fzaninotto/faker": "1.6.0",
         "ucsdmath/date": "1.14.x-dev",
-        "symfony/var-dumper": "3.2.2",
+        "symfony/var-dumper": "3.2.3",
         "squizlabs/php_codesniffer": "2.8.0"
     },
     "autoload": {
