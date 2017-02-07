@@ -125,7 +125,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
         $this->isValidFtpAccountCredentials($accountCredentials)
             ? $this->appendToStorageRegister($accountCredentials)
             : $this->logError('AbstractSftp::connect()', 'invalid account credentials', 'E076');
-        list($accountHost, $accountUsername, $accountPassword) = [
+        [$accountHost, $accountUsername, $accountPassword] = [
             $this->get('account_host'),
             $this->get('account_username'),
             $this->get('account_password')
