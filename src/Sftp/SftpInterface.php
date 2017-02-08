@@ -36,14 +36,14 @@ interface SftpInterface
      * @var int    SOURCE_CALLBACK       The common stream source as a callback (type)
      * @var int    SOURCE_STRING         The common stream source as inline string (type)
      */
-    const FRAMEWORK_MINIMUM_PHP = '7.1.0';
-    const DEFAULT_CHARSET       = 'UTF-8';
-    const CRLF                  = "\r\n";
-    const REQUIRE_HTTPS         = true;
-    const DEFAULT_TIMEZONE      = 'America/Los_Angeles';
-    const SOURCE_LOCAL_FILE     = 1;
-    const SOURCE_CALLBACK       = 16;
-    const SOURCE_STRING         = 2;
+    public const FRAMEWORK_MINIMUM_PHP = '7.1.0';
+    public const DEFAULT_CHARSET       = 'UTF-8';
+    public const CRLF                  = "\r\n";
+    public const REQUIRE_HTTPS         = true;
+    public const DEFAULT_TIMEZONE      = 'America/Los_Angeles';
+    public const SOURCE_LOCAL_FILE     = 1;
+    public const SOURCE_CALLBACK       = 16;
+    public const SOURCE_STRING         = 2;
 
     //--------------------------------------------------------------------------
 }
