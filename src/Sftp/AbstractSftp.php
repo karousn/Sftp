@@ -148,7 +148,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
      *
      * @return void
      */
-    protected function logError(string $method, string $message, string $trace)
+    protected function logError(string $method, string $message, string $trace): void
     {
         ServiceRequestContainer::perform()
             ->Database
