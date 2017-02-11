@@ -33,15 +33,15 @@ use UCSDMath\Sftp\ExtendedOperations\SftpExtendedOperationsTraitInterface;
  * (+) string getPwd();
  * (+) int getFileSize(string $absolutePath);
  * (+) SftpInterface deleteFile(string $absolutePath);
- * (+) SftpInterface connect(array $accountCredentials);
+ * (+) SftpInterface connect(iterable $accountCredentials);
  * (+) SftpInterface changeDirectory(string $absolutePath);
  * (+) SftpInterface createDirectory(string $absolutePath);
  * (+) SftpInterface deleteDirectory(string $absolutePath, bool $recursive = false);
  * (+) SftpInterface chmod(string $mode, string $absolutePath, bool $recursive = false);
  * (+) SftpInterface uploadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
  * (+) SftpInterface downloadFile(string $absolutePathRemoteFile, string $absolutePathLocalFile);
- * (-) SftpInterface appendToStorageRegister(array $arraySubset);
- * (-) bool isValidFtpAccountCredentials(array $accountCredentials);
+ * (-) SftpInterface appendToStorageRegister(iterable $arraySubset);
+ * (-) bool isValidFtpAccountCredentials(iterable $accountCredentials);
  * (-) bool logError(string $method, string $message, string $trace);
  *
  * @author Daryl Eisner <deisner@ucsd.edu>
@@ -112,11 +112,11 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
     /**
      * Connect to remote account.
      *
-     * @param array $accountCredentials The list of remote account credentials
+     * @param iterable $accountCredentials The list of remote account credentials
      *
      * @return SftpInterface The current instance
      */
-    public function connect(array $accountCredentials): SftpInterface
+    public function connect(iterable $accountCredentials): SftpInterface
     {
         /**
          * Note: on a successful login, the default directory
@@ -165,11 +165,11 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
     /**
      * Validate SFTP Account Credentials.
      *
-     * @param array $accountCredentials The list of remote account credentials
+     * @param iterable $accountCredentials The list of remote account credentials
      *
      * @return bool
      */
-    protected function isValidFtpAccountCredentials(array $accountCredentials): bool
+    protected function isValidFtpAccountCredentials(iterable $accountCredentials): bool
     {
         /**
          * Intersect the targets with the haystack and make sure
@@ -346,11 +346,11 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
     /**
      * Combine storageRegister with associated array.
      *
-     * @param array $arraySubset The array list
+     * @param iterable $arraySubset The array list
      *
      * @return SftpInterface The current instance
      */
-    protected function appendToStorageRegister(array $arraySubset): SftpInterface
+    protected function appendToStorageRegister(iterable $arraySubset): SftpInterface
     {
         /* Merge both registers and apply the overrides. */
         $this->storageRegister = array_merge($this->storageRegister, $arraySubset);
@@ -411,15 +411,15 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
      * (+) bool isValidUuid(string $uuid);
      * (+) bool isValidEmail(string $email);
      * (+) bool isValidSHA512(string $hash);
-     * (+) bool isStringKey(string $str, array $keys);
      * (+) bool doesFunctionExist(string $functionName);
+     * (+) bool isStringKey(string $str, iterable $keys);
      * (+) mixed get(string $key, string $subkey = null);
-     * (+) mixed __call(string $callback, array $parameters);
      * (+) mixed getProperty(string $name, string $key = null);
+     * (+) mixed __call(string $callback, iterable $parameters);
      * (+) object set(string $key, $value, string $subkey = null);
      * (+) object setProperty(string $name, $value, string $key = null);
-     * (-) Exception throwExceptionError(array $error);
-     * (-) InvalidArgumentException throwInvalidArgumentExceptionError(array $error);
+     * (-) Exception throwExceptionError(iterable $error);
+     * (-) InvalidArgumentException throwInvalidArgumentExceptionError(iterable $error);
      */
     use ServiceFunctions;
 
