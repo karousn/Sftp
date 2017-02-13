@@ -4,6 +4,39 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.14.0 (2017-02-12)
+
+ - Update to new a minimum version (UCSDMath Framework Requirement): PHP v7.1
+ - Update to `npm` [(v4.2.0)](https://www.npmjs.com)
+
+ - Update to PHP Component: `mockery/mockery` [(v0.9.8)](https://packagist.org/packages/mockery/mockery)
+ - Update to PHP Component: `phpunit/phpunit` [(v6.0.6)](https://packagist.org/packages/phpunit/phpunit)
+ - Update to PHP Component: `league/flysystem` [(v1.0.35)](https://packagist.org/packages/league/flysystem)
+ - Update to PHP Component: `symfony/yaml` [(v3.2.3)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: `symfony/debug` [(v3.2.3)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: `symfony/finder` [(v3.2.3)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: `symfony/console` [(v3.2.3)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: `symfony/process` [(v3.2.3)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: `symfony/routing` [(v3.2.3)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: `symfony/validator` [(v3.2.3)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: `symfony/filesystem` [(v3.2.3)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: `symfony/serializer` [(v3.2.3)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: `symfony/var-dumper` [(v3.2.3)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: `symfony/http-kernel` [(v3.2.3)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: `symfony/http-foundation` [(v3.2.3)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: `symfony/event-dispatcher` [(v3.2.3)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: `symfony/framework-bundle` [(v3.2.3)](https://packagist.org/packages/symfony/framework-bundle)
+
+ - Added new PHP Component: `ucsdmath/controller` [(v1.14.0)](https://github.com/ucsdmath/controller)
+
+ - Added: Class and Interface constant visibility modifiers (provided with >= PHP v7.1).
+ - Added: void to specify class method `return types` where necessary (provided with >= PHP v7.1).
+ - Added: null to specify class method `return types` where necessary (provided with >= PHP v7.1).
+ - Added: using of symmetric array destructuring and removal of list()assignments (provided with >= PHP v7.1).
+ - Added: using of new iterable pseduo-type in methods for type hint and returns.
+ - Added: method `ControllerServiceMethods::str_lreplace(string $search, string $replace, string $subject): string`
+          replaces left occurrence of pattern only.
+
 ### v1.13.0 (2017-02-05)
 
  - Update to `npm` [(v4.1.2)](https://www.npmjs.com)
