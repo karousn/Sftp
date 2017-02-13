@@ -9,6 +9,7 @@ updates) will be documented in this file.
  - Update to new a minimum version (UCSDMath Framework Requirement): PHP v7.1
  - Update to `npm` [(v4.2.0)](https://www.npmjs.com)
 
+ - Update to PHP Component: `swiftmailer/swiftmailer` [(v5.4.6)](http://swiftmailer.org)
  - Update to PHP Component: `mockery/mockery` [(v0.9.8)](https://packagist.org/packages/mockery/mockery)
  - Update to PHP Component: `phpunit/phpunit` [(v6.0.6)](https://packagist.org/packages/phpunit/phpunit)
  - Update to PHP Component: `league/flysystem` [(v1.0.35)](https://packagist.org/packages/league/flysystem)
