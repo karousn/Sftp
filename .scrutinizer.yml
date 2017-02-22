@@ -102,4 +102,4 @@ checks:
             preserve_blanklines: false
             order_alphabetically: false
 filter:
-    excluded_paths: ["tests/*"]
+    excluded_paths: ["tests/*", "resource/*"]
