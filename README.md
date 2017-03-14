@@ -1,26 +1,20 @@
 # Sftp
 <table border="0">
   <tr>
-    <td width="300"><img height="240" width="290"alt="UCSDMath - Mathlink" src="https://github.com/ucsdmath/Sftp/blob/master/resource/img/sftp.png"></td>
+    <td width="300"><img height="240" width="290" alt="UCSDMath - Mathlink" src="https://github.com/ucsdmath/Sftp/blob/master/resource/img/sftp.png"></td>
     <td><h3>A Development Project in PHP</h3><p><strong>UCSDMath</strong> provides a testing framework for general internal Intranet software applications for the UCSD, Department of Mathematics. This is used for development and testing only. [not for production]</p>
-
 <table width="550"><tr><td width="120"><b>Travis CI</b></td><td width="250"><b>SensioLabs</b></td><td width="180"><b>Dependencies</b></td></tr><tr>
-
     <td width="120" align="center">
         <a href="https://travis-ci.org/ucsdmath/Sftp">
         <img src="https://travis-ci.org/ucsdmath/Sftp.svg?branch=master" style="float: left; margin: 0px 0px 10px 10px;"></a><br>
-
         <a href="https://www.codacy.com/app/ucsdmath-project/Sftp">
         <img src="https://api.codacy.com/project/badge/Grade/29d0f1527e844c13923607a072e52ef1"></a><br>
-
         <a href="https://scrutinizer-ci.com/g/ucsdmath/Sftp/?branch=master">
         <img src="https://img.shields.io/scrutinizer/g/ucsdmath/Sftp.svg"></a>
     </td>
-
     <td width="250" align="center">
         <a href="https://insight.sensiolabs.com/projects/3b103233-5eff-48d7-98c1-476daf1a7e73">
         <img src="https://insight.sensiolabs.com/projects/3b103233-5eff-48d7-98c1-476daf1a7e73/big.png" style="float: right; margin: 0px 0px 10px 10px;" width="212" height="51"></a><br>
-
         <a href="https://travis-ci.org/ucsdmath/Sftp"><img src="https://img.shields.io/badge/PHP-%207.1%20Tested%20-33cc33.svg"></a>
     </td>
     <td width="180" align="center">
