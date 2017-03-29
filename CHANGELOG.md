@@ -4,6 +4,102 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.17.0 (2017-03-31)
+
+ - Update to `npm` [(v4.4.4)](https://www.npmjs.com)
+ - Update to `Moment` [(v2.18.1)](http://momentjs.com)
+ - Update to `Babel.js` [(v6.24.0)](https://babeljs.io)
+ - Update to `Node.js` [(v7.8.0)](https://nodejs.org/en/)
+ - Update to jQuery [(v3.2.1)](http://jquery.com/download/)
+ - Update to `Webpack.js` [(v2.3.2)](https://webpack.js.org)
+ - Update to PHP Component: `twig/twig` [(v2.3.0)](https://packagist.org/packages/twig/twig)
+ - Update to PHP Component: `league/flysystem` [(v1.0.37)](https://packagist.org/packages/league/flysystem)
+ - Update to `@danielfarrell/bootstrap-combobox` [(v1.1.8)](https://www.npmjs.com/package/@danielfarrell/bootstrap-combobox)
+ - Update to PHP Component: `monolog/monolog` [(v1.22.1)](https://packagist.org/packages/monolog/monolog)
+ - Update to PHP Component: `phpunit/phpunit` [(v6.0.11)](https://packagist.org/packages/phpunit/phpunit)
+ - Update to PHP Component: `ezyang/htmlpurifier` [(v4.9.2)](https://packagist.org/packages/ezyang/htmlpurifier)
+ - Update to PHP Component: `respect/validation` [(v1.1.12)](https://packagist.org/packages/respect/validation)
+
+ - Added new PHP repository: `ucsdmath/comprehensive` [(v1.17.0)](https://github.com/ucsdmath/Comprehensive)
+ - Fixed Mathlink logout application (now correctly interacting with shibboleth Identity Provider (IdP) and uses the
+     correct Shibboleth attributes)  Now User-logout, system-logouts, and auto-logouts are logged by all applications.
+ - Fixed: now repository is archived within a database parent folder for better organization of daily dumps.
+
+ - Session settings no longer used in PHP 7.1 were removed from UCSDMath Framework 1.17.0:
+   - ini_set('session.hash_function', $this->getProperty('phpSessionHashAlgos'));
+   - ini_set('session.hash_bits_per_character', '5');
+   - ini_set('session.entropy_length', '512');
+   - ini_set('session.entropy_file', '/dev/urandom');
+
+ - Adding new to JavaScript repository: ucsdmath-js (50 new functions)
+     Project Functions added (in Workshop):
+       (+) {Array} array_chunk(Array input, Int size, Bool preserveKeys);
+       (+) {Array} array_combine(Array keys, Array values);
+       (+) {Array} array_diff(Array arr1, Array arr2, ...);
+       (+) {Array} array_flip(Array trans);
+       (+) {Array} array_keys(Array input, Mixed searchValue, Bool argStrict);
+       (+) {Array} array_merge(Array array1, Array array2, ...);
+       (+) {Array} array_push(Array inputArr);
+       (+) {Array} array_reverse(Array array, Bool preserveKeys);
+       (+) {Array} array_slice(Array arr, Int offst, Int lgth, Bool preserveKeys);
+       (+) {Array} array_splice(Array arr, Int offst, Int lgth, Mixed replacement);
+       (+) {Array} array_values(Array input);
+       (+) {Array} split(String delimiter, String string);
+       (+) {Bool} array_key_exists(Mixed key, Array search);
+       (+) {Bool} empty(Mixed mixedVar);
+       (+) {Bool} function_exists(String funcName);
+       (+) {Bool} in_array(Mixed needle, Array haystack, Bool argStrict);
+       (+) {Bool} isset(Mixed mixedVar);
+       (+) {Bool} is_array(Mixed mixedVar);
+       (+) {Bool} is_bool(Mixed mixedVar);
+       (+) {Bool} is_int(Mixed mixedVar);
+       (+) {Bool} is_null(Mixed mixedVar);
+       (+) {Bool} is_numeric(Mixed mixedVar);
+       (+) {Bool} is_object(Mixed mixedVar);
+       (+) {Bool} is_string(Mixed mixedVar);
+       (+) {Int} array_unshift(Array array);
+       (+) {Int} count(Mixed mixedVar, Int mode);
+       (+) {Int} strrpos(String haystack, String needle, Int offset);
+       (+) {Int} substr_count(String haystack, String needle, Int offset, Int length);
+       (+) {Mixed} array_pop(Array inputArr);
+       (+) {Mixed} array_shift(Array inputArr);
+       (+) {Mixed} strpos(String haystack, Mixed needle, Int offset);
+       (+) {Mixed} substr_replace(Mixed str, Mixed replace, Mixed start, Mixed length);
+       (+) {String} base64_decode(String encodedData);
+       (+) {String} base64_encode(String stringToEncode);
+       (+) {String} basename(String path, String suffix);
+       (+) {String} dirname(String path);
+       (+) {String} gettype(Mixed mixedVar);
+       (+) {String} lcfirst(String str);
+       (+) {String} ltrim(String str, String charlist);
+       (+) {String} realpath(String path);
+       (+) {String} rtrim(String str, String charlist);
+       (+) {String} strtolower(String str);
+       (+) {String} strtoupper(String str);
+       (+) {String} str_pad(String input, Int padLength, String padString, Int padType);
+       (+) {String} str_repeat(String input, Int multiplier);
+       (+) {String} substr(String str, Int start, Int len);
+       (+) {String} trim(String str, String charlist);
+       (+) {String} ucfirst(String str);
+       (+) {String} ucwords(String str);
+       (+) {String} wordwrap(String str, Int intWidth, String strBreak, Bool cut);
+
+ - Adding new tables, functions, triggers:
+       (+) course_petitions_warehouse_audit_log.ddl
+       (+) personnel_warehouse_audit_log.ddl
+       (+) system-logs-warehouse_audit_log.ddl
+       (+) system-sessions-warehouse_audit_log.ddl
+       (+) function-global-uuid_v4.ddl
+       (+) trigger_course_petitions_after_delete_audit_log.ddl
+       (+) trigger_course_petitions_after_insert_audit_log.ddl
+       (+) trigger_course_petitions_after_update_audit_log.ddl
+       (+) trigger_personnel_after_insert_faculty_profile_insert.ddl
+       (+) trigger_system_logs_after_insert_audit_log.ddl
+       (+) trigger_system_sessions_after_insert_record_store.ddl
+
+ - Notes: (1) Configured auto-backups of warehouse databases to sample test-case 1.
+          (2) Configured auto-backups of WordPress databases to save to disk.
+
 ### v1.16.0 (2017-03-12)
 
  - Update to `npm` [(v4.4.1)](https://www.npmjs.com)
