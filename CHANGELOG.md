@@ -12,6 +12,7 @@ updates) will be documented in this file.
  - Update to `Node.js` [(v7.8.0)](https://nodejs.org/en/)
  - Update to jQuery [(v3.2.1)](http://jquery.com/download/)
  - Update to `Webpack.js` [(v2.3.2)](https://webpack.js.org)
+ - Update to `TinyMCE` [(v4.5.6)](http://www.tinymce.com/download/download.php)
  - Update to PHP Component: `twig/twig` [(v2.3.0)](https://packagist.org/packages/twig/twig)
  - Update to PHP Component: `league/flysystem` [(v1.0.37)](https://packagist.org/packages/league/flysystem)
  - Update to `@danielfarrell/bootstrap-combobox` [(v1.1.8)](https://www.npmjs.com/package/@danielfarrell/bootstrap-combobox)
