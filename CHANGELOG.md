@@ -4,6 +4,52 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.18.0 (2017-04-23)
+
+ - Update to npm [(v4.5.0)](https://www.npmjs.com)
+ - Update to Babel.js [(v6.24.1)](https://babeljs.io)
+ - Update to Node.js [(v7.9.0)](https://nodejs.org/en/)
+ - Update to Webpack.js [(v2.4.1)](https://webpack.js.org)
+ - Update to React.js [(v15.5.4)](https://facebook.github.io/react/)
+ - Update to PNotify.js [(v3.0.1)](https://www.npmjs.com/package/pnotify)
+ - Update to CountUp.js [(v1.8.4)](http://inorganik.github.io/countUp.js/)
+ - Update to Modernizr.js [(v3.5.0)](https://github.com/Modernizr/Modernizr/releases)
+ - Update to tablesorter jQuery plugin [(v2.28.8)](https://mottie.github.io/tablesorter/docs/)
+ - Update to jQuery-Circle-Progress [(v1.2.0)](http://kottenator.github.io/jquery-circle-progress/)
+
+ - Update to PHP Component: symfony/yaml [(v3.2.7)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: symfony/debug [(v3.2.7)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: symfony/finder [(v3.2.7)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: symfony/console [(v3.2.7)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: symfony/process [(v3.2.7)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: symfony/routing [(v3.2.7)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: symfony/security [(v3.2.7)](https://packagist.org/packages/symfony/security)
+ - Update to PHP Component: symfony/validator [(v3.2.7)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: symfony/filesystem [(v3.2.7)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: symfony/serializer [(v3.2.7)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: symfony/var-dumper [(v3.2.7)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: symfony/browser-kit [(v3.2.7)](https://packagist.org/packages/symfony/browser-kit)
+ - Update to PHP Component: symfony/dom-crawler [(v3.2.7)](https://packagist.org/packages/symfony/dom-crawler)
+ - Update to PHP Component: symfony/http-kernel [(v3.2.7)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: symfony/security-core [(v3.2.7)](https://packagist.org/packages/symfony/security-core)
+ - Update to PHP Component: symfony/security-csrf [(v3.2.7)](https://packagist.org/packages/symfony/security-csrf)
+ - Update to PHP Component: symfony/http-foundation [(v3.2.7)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: symfony/event-dispatcher [(v3.2.7)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: symfony/framework-bundle [(v3.2.7)](https://packagist.org/packages/symfony/framework-bundle)
+ - Update to PHP Component: symfony/options-resolver [(v3.2.7)](https://packagist.org/packages/symfony/options-resolver)
+
+ - Update to PHP Component: swiftmailer/swiftmailer [(v5.4.7)](http://swiftmailer.org)
+ - Update to PHP Component: twig/twig [(v2.3.2)](https://packagist.org/packages/twig/twig)
+ - Update to PHP Component: milon/barcode [(v5.3.5)](https://packagist.org/packages/milon/barcode)
+ - Update to PHP Component: phpunit/phpunit [(v6.1.1)](https://packagist.org/packages/phpunit/phpunit)
+ - Update to PHP Component: league/flysystem [(v1.0.38)](https://packagist.org/packages/league/flysystem)
+ - Update to PHP Component: intervention/image [(v2.3.13)](https://packagist.org/packages/intervention/image)
+ - Update to PHP Component: illuminate/filesystem [(v5.4.19)](https://packagist.org/packages/illuminate/filesystem)
+
+ - Added new PHP Component: endroid/qrcode [(v2.0.2)](https://github.com/endroid/QrCode)
+ - Added new PHP Component: illuminate/cache [(v5.4.19)](https://packagist.org/packages/illuminate/cache)
+ - Added new PHP Component: spatie/flysystem-dropbox [(v1.0.0)](https://packagist.org/packages/spatie/flysystem-dropbox)
+
 ### v1.17.0 (2017-03-31)
 
  - Update to `npm` [(v4.4.4)](https://www.npmjs.com)
