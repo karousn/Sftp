@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "phpseclib/phpseclib": "2.0.4",
+        "phpseclib/phpseclib": "2.0.5",
         "ucsdmath/functions": "1.19.x-dev",
         "ucsdmath/configuration": "1.19.x-dev",
         "ucsdmath/dependency-injection": "1.19.x-dev"
