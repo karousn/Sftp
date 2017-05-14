@@ -55,7 +55,7 @@ abstract class AbstractSftp implements SftpInterface, ServiceFunctionsInterface,
      *
      * @api
      */
-    public const VERSION = '1.19.0';
+    public const VERSION = '1.20.0';
 
     //--------------------------------------------------------------------------
 
