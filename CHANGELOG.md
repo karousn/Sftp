@@ -4,6 +4,48 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.19.0 (2017-05-14)
+
+ - Update to WordPress [(v4.7.4)](https://wordpress.org)
+ - Update to Node.js [(v7.10.0)](https://nodejs.org/en/)
+ - Update to Webpack.js [(v2.5.1)](https://webpack.js.org)
+ - Update to sprintf-js [(v1.1.0)](https://github.com/alexei/sprintf.js)
+ - Update to PNotify.js [(v3.2.0)](https://www.npmjs.com/package/pnotify)
+ - Update to CountUp.js [(v1.8.5)](http://inorganik.github.io/countUp.js/)
+ - Update to TinyMCE [(v4.6.1)](http://www.tinymce.com/download/download.php)
+ - Update to tablesorter jQuery plugin [(v2.28.9)](https://mottie.github.io/tablesorter/docs/)
+
+ - Update to PHP Component: symfony/yaml [(v3.2.8)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: symfony/debug [(v3.2.8)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: symfony/finder [(v3.2.8)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: symfony/console [(v3.2.8)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: symfony/process [(v3.2.8)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: symfony/routing [(v3.2.8)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: symfony/security [(v3.2.8)](https://packagist.org/packages/symfony/security)
+ - Update to PHP Component: symfony/validator [(v3.2.8)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: symfony/filesystem [(v3.2.8)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: symfony/serializer [(v3.2.8)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: symfony/var-dumper [(v3.2.8)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: symfony/browser-kit [(v3.2.8)](https://packagist.org/packages/symfony/browser-kit)
+ - Update to PHP Component: symfony/dom-crawler [(v3.2.8)](https://packagist.org/packages/symfony/dom-crawler)
+ - Update to PHP Component: symfony/http-kernel [(v3.2.8)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: phpseclib/phpseclib [(v2.0.5)](https://packagist.org/packages/phpseclib/phpseclib)
+ - Update to PHP Component: symfony/security-core [(v3.2.8)](https://packagist.org/packages/symfony/security-core)
+ - Update to PHP Component: symfony/security-csrf [(v3.2.8)](https://packagist.org/packages/symfony/security-csrf)
+ - Update to PHP Component: symfony/http-foundation [(v3.2.8)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: symfony/event-dispatcher [(v3.2.8)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: symfony/framework-bundle [(v3.2.8)](https://packagist.org/packages/symfony/framework-bundle)
+ - Update to PHP Component: symfony/options-resolver [(v3.2.8)](https://packagist.org/packages/symfony/options-resolver)
+ - Update to PHP Component: spatie/flysystem-dropbox [(v1.0.1)](https://packagist.org/packages/spatie/flysystem-dropbox)
+
+ - Update to PHP Component: swiftmailer/swiftmailer [(v5.4.8)](http://swiftmailer.org)
+ - Added new PHP Component: endroid/qrcode [(v2.1.4)](https://github.com/endroid/QrCode)
+ - Update to PHP Component: phpunit/phpunit [(v6.1.3)](https://packagist.org/packages/phpunit/phpunit)
+ - Update to PHP Component: league/flysystem [(v1.0.40)](https://packagist.org/packages/league/flysystem)
+ - Update to PHP Component: squizlabs/php_codesniffer [(v3.0.0)](https://packagist.org/packages/squizlabs/php_codesniffer)
+ - Added new PHP repository: ucsdmath/Ajax [(v1.19.0)](https://github.com/ucsdmath/Ajax)
+ - Added new PHP repository: ucsdmath/CamelotDb [(v1.19.0)](https://github.com/ucsdmath/CamelotDb)
+
 ### v1.18.0 (2017-04-23)
 
  - Update to npm [(v4.5.0)](https://www.npmjs.com)
