@@ -4,6 +4,43 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.20.0 (2017-06-03)
+
+ - Update to npm [(v5.0.2)](https://www.npmjs.com)
+ - Update to Node.js [(v8.0.0)](https://nodejs.org/en/)
+ - Update to WordPress [(v4.7.5)](https://wordpress.org)
+ - Update to Composer [(v1.4.2)](https://getcomposer.org)
+ - Update to Webpack.js [(v2.6.1)](https://webpack.js.org)
+ - Update to TinyMCE [(v4.6.3)](http://www.tinymce.com/download/download.php)
+ - Update to tablesorter jQuery plugin [(v2.28.13)](https://mottie.github.io/tablesorter/docs/)
+
+ - Update to PHP Component: symfony/yaml [(v3.3.0)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: symfony/debug [(v3.3.0)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: symfony/finder [(v3.3.0)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: symfony/console [(v3.3.0)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: symfony/process [(v3.3.0)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: symfony/routing [(v3.3.0)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: symfony/security [(v3.3.0)](https://packagist.org/packages/symfony/security)
+ - Update to PHP Component: symfony/validator [(v3.3.0)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: symfony/filesystem [(v3.3.0)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: symfony/serializer [(v3.3.0)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: symfony/var-dumper [(v3.3.0)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: symfony/browser-kit [(v3.3.0)](https://packagist.org/packages/symfony/browser-kit)
+ - Update to PHP Component: symfony/dom-crawler [(v3.3.0)](https://packagist.org/packages/symfony/dom-crawler)
+ - Update to PHP Component: symfony/http-kernel [(v3.3.0)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: symfony/security-core [(v3.3.0)](https://packagist.org/packages/symfony/security-core)
+ - Update to PHP Component: symfony/security-csrf [(v3.3.0)](https://packagist.org/packages/symfony/security-csrf)
+ - Update to PHP Component: symfony/http-foundation [(v3.3.0)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: symfony/event-dispatcher [(v3.3.0)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: symfony/framework-bundle [(v3.3.0)](https://packagist.org/packages/symfony/framework-bundle)
+ - Update to PHP Component: symfony/options-resolver [(v3.3.0)](https://packagist.org/packages/symfony/options-resolver)
+
+ - Update to PHP Component: swiftmailer/swiftmailer [(v6.0.1)](http://swiftmailer.org)
+ - Added new PHP Component: endroid/qrcode [(v2.2.2)](https://github.com/endroid/QrCode)
+ - Update to PHP Component: phpunit/phpunit [(v6.2.1)](https://packagist.org/packages/phpunit/phpunit)
+
+ - Notes: none
+
 ### v1.19.0 (2017-05-14)
 
  - Update to WordPress [(v4.7.4)](https://wordpress.org)
