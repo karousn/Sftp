@@ -32,7 +32,7 @@
         "symfony/browser-kit": "3.3.2",
         "symfony/dom-crawler": "3.3.2",
         "symfony/options-resolver": "3.3.2",
-        "squizlabs/php_codesniffer": "3.0.0"
+        "squizlabs/php_codesniffer": "3.0.1"
     },
     "autoload": {
         "psr-4": {
