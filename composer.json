@@ -20,18 +20,18 @@
         "ucsdmath/dependency-injection": "1.21.x-dev"
     },
     "require-dev": {
-        "symfony/debug": "3.3.2",
+        "symfony/debug": "3.3.3",
         "mockery/mockery": "0.9.9",
         "phpunit/phpunit": "6.2.2",
         "fzaninotto/faker": "1.6.0",
         "ucsdmath/date": "1.21.x-dev",
-        "symfony/var-dumper": "3.3.2",
-        "symfony/browser-kit": "3.3.2",
-        "symfony/dom-crawler": "3.3.2",
-        "symfony/options-resolver": "3.3.2",
-        "symfony/browser-kit": "3.3.2",
-        "symfony/dom-crawler": "3.3.2",
-        "symfony/options-resolver": "3.3.2",
+        "symfony/var-dumper": "3.3.3",
+        "symfony/browser-kit": "3.3.3",
+        "symfony/dom-crawler": "3.3.3",
+        "symfony/options-resolver": "3.3.3",
+        "symfony/browser-kit": "3.3.3",
+        "symfony/dom-crawler": "3.3.3",
+        "symfony/options-resolver": "3.3.3",
         "squizlabs/php_codesniffer": "3.0.1"
     },
     "autoload": {
