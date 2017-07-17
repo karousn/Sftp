@@ -4,6 +4,53 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.21.0 (2017-07-17)
+
+ - Update to npm [(v5.3.0)](https://www.npmjs.com)
+ - Update to Node.js [(v8.1.4)](https://nodejs.org/en/)
+ - Update to WordPress [(v4.8.0)](https://wordpress.org)
+ - Update to Webpack.js [(v3.3.0)](https://webpack.js.org)
+ - Update to React.js [(v15.6.1)](https://facebook.github.io/react/)
+ - Update to TinyMCE [(v4.6.4)](http://www.tinymce.com/download/download.php)
+ - Update to tablesorter jQuery plugin [(v2.28.15)](https://mottie.github.io/tablesorter/docs/)
+
+ - Update to PHP Component: symfony/yaml [(v3.3.4)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: symfony/debug [(v3.3.4)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: symfony/finder [(v3.3.4)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: symfony/console [(v3.3.4)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: symfony/process [(v3.3.4)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: symfony/routing [(v3.3.4)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: symfony/security [(v3.3.4)](https://packagist.org/packages/symfony/security)
+ - Update to PHP Component: symfony/validator [(v3.3.4)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: symfony/filesystem [(v3.3.4)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: symfony/serializer [(v3.3.4)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: symfony/var-dumper [(v3.3.4)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: symfony/browser-kit [(v3.3.4)](https://packagist.org/packages/symfony/browser-kit)
+ - Update to PHP Component: symfony/dom-crawler [(v3.3.4)](https://packagist.org/packages/symfony/dom-crawler)
+ - Update to PHP Component: symfony/http-kernel [(v3.3.4)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: symfony/security-core [(v3.3.4)](https://packagist.org/packages/symfony/security-core)
+ - Update to PHP Component: symfony/security-csrf [(v3.3.4)](https://packagist.org/packages/symfony/security-csrf)
+ - Update to PHP Component: symfony/http-foundation [(v3.3.4)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: symfony/event-dispatcher [(v3.3.4)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: symfony/framework-bundle [(v3.3.4)](https://packagist.org/packages/symfony/framework-bundle)
+ - Update to PHP Component: symfony/options-resolver [(v3.3.4)](https://packagist.org/packages/symfony/options-resolver)
+
+ - Update to PHP Component: mpdf/mpdf [(v6.1.4)](https://mpdf.github.io)
+ - Update to PHP Component: endroid/qrcode [(v2.2.3)](https://github.com/endroid/QrCode)
+ - Update to PHP Component: twig/twig [(v2.4.3)](https://packagist.org/packages/twig/twig)
+ - Update to PHP Component: phpunit/phpunit [(v6.2.3)](https://packagist.org/packages/phpunit/phpunit)
+ - Update to PHP Component: monolog/monolog [(v1.23.0)](https://packagist.org/packages/monolog/monolog)
+ - Update to PHP Component: illuminate/cache [(v5.4.27)](https://packagist.org/packages/illuminate/cache)
+ - Update to PHP Component: intervention/image [(v2.4.0)](https://packagist.org/packages/intervention/image)
+ - Update to PHP Component: ezyang/htmlpurifier [(v4.9.3)](https://packagist.org/packages/ezyang/htmlpurifier)
+ - Update to PHP Component: phpseclib/phpseclib [(v2.0.6)](https://packagist.org/packages/phpseclib/phpseclib)
+ - Update to PHP Component: illuminate/filesystem [(v5.4.27)](https://packagist.org/packages/illuminate/filesystem)
+ - Update to PHP Component: squizlabs/php_codesniffer [(v3.0.1)](https://packagist.org/packages/squizlabs/php_codesniffer)
+
+ - Added new PHP repository: ucsdmath/translation [(v1.21.0)](https://github.com/ucsdmath/Translation)
+
+ - Notes:  None
+
 ### v1.20.0 (2017-06-03)
 
  - Update to npm [(v5.0.2)](https://www.npmjs.com)
