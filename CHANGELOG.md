@@ -4,6 +4,33 @@
 All notable changes to `UCSDMath/Sftp` (bug, security fixes, and component
 updates) will be documented in this file.
 
+### v1.22.0 (2017-07-18)
+
+ - Update to PHP Component: symfony/yaml [(v3.3.5)](https://packagist.org/packages/symfony/yaml)
+ - Update to PHP Component: symfony/debug [(v3.3.5)](https://packagist.org/packages/symfony/debug)
+ - Update to PHP Component: symfony/finder [(v3.3.5)](https://packagist.org/packages/symfony/finder)
+ - Update to PHP Component: symfony/console [(v3.3.5)](https://packagist.org/packages/symfony/console)
+ - Update to PHP Component: symfony/process [(v3.3.5)](https://packagist.org/packages/symfony/process)
+ - Update to PHP Component: symfony/routing [(v3.3.5)](https://packagist.org/packages/symfony/routing)
+ - Update to PHP Component: symfony/security [(v3.3.5)](https://packagist.org/packages/symfony/security)
+ - Update to PHP Component: symfony/validator [(v3.3.5)](https://packagist.org/packages/symfony/validator)
+ - Update to PHP Component: symfony/filesystem [(v3.3.5)](https://packagist.org/packages/symfony/filesystem)
+ - Update to PHP Component: symfony/serializer [(v3.3.5)](https://packagist.org/packages/symfony/serializer)
+ - Update to PHP Component: symfony/var-dumper [(v3.3.5)](https://packagist.org/packages/symfony/var-dumper)
+ - Update to PHP Component: symfony/browser-kit [(v3.3.5)](https://packagist.org/packages/symfony/browser-kit)
+ - Update to PHP Component: symfony/dom-crawler [(v3.3.5)](https://packagist.org/packages/symfony/dom-crawler)
+ - Update to PHP Component: symfony/http-kernel [(v3.3.5)](https://packagist.org/packages/symfony/http-kernel)
+ - Update to PHP Component: symfony/security-core [(v3.3.5)](https://packagist.org/packages/symfony/security-core)
+ - Update to PHP Component: symfony/security-csrf [(v3.3.5)](https://packagist.org/packages/symfony/security-csrf)
+ - Update to PHP Component: symfony/http-foundation [(v3.3.5)](https://packagist.org/packages/symfony/http-foundation)
+ - Update to PHP Component: symfony/event-dispatcher [(v3.3.5)](https://packagist.org/packages/symfony/event-dispatcher)
+ - Update to PHP Component: symfony/framework-bundle [(v3.3.5)](https://packagist.org/packages/symfony/framework-bundle)
+ - Update to PHP Component: symfony/options-resolver [(v3.3.5)](https://packagist.org/packages/symfony/options-resolver)
+
+ - Update to PHP Component: squizlabs/php_codesniffer [(v3.0.2)](https://packagist.org/packages/squizlabs/php_codesniffer)
+
+ - Notes:  None
+
 ### v1.21.0 (2017-07-17)
 
  - Update to npm [(v5.3.0)](https://www.npmjs.com)
