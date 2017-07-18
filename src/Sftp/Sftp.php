@@ -36,7 +36,7 @@ class Sftp extends AbstractSftp implements SftpInterface
      *
      * @api
      */
-    public const VERSION = '1.22.0';
+    public const VERSION = '1.23.0';
 
     //--------------------------------------------------------------------------
 
